@@ -20,15 +20,16 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+
 import cn.com.prescription.framework.StandardConstantsIF;
 import cn.com.prescription.framework.action.ActionMessages;
 import cn.com.prescription.framework.common.session.UserSessionInfo;
 import cn.com.prescription.framework.common.session.UserSessionUtils;
 import cn.com.prescription.framework.exception.SystemException;
-
-import org.apache.log4j.FileAppender;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 
 /**
  * ログ出力ユーティリティ.
@@ -48,13 +49,13 @@ public final class LogUtils {
         .compile("(([a-zA-Z0-9-]+?)_)??([a-zA-Z0-9-]+?)_([a-zA-Z0-9]+?)_([0-9]{8})_([0-9]{6})_([0-9]{3})\\.log");
 
     /** 基盤用ロガー */
-    public static Logger loggerFramework = Logger.getLogger("framework");
+    public static Logger loggerFramework = LogManager.getLogger("framework");
 
     /** 操作ロガー */
-    private static Logger loggerOperate = Logger.getLogger("operate");
+    private static Logger loggerOperate = LogManager.getLogger("operate");
 
     /** 错误用ロガー */
-    private static Logger loggerException = Logger.getLogger("exception");
+    private static Logger loggerException = LogManager.getLogger("exception");
 
     /** タイムスタンプ */
     private Timestamp timeStamp = null;
@@ -185,13 +186,13 @@ public final class LogUtils {
         // ロガーのメンバに設定する為、同期を取る
         synchronized (LOCK_OBJECT) {
             // ロガー取得
-            Logger logger_ = Logger.getLogger("app");
-            // アペンダを取得
-            FileAppender appender_ = (FileAppender) logger_.getAppender("app");
+            Logger logger_ = LoggerContext.getContext().getLogger("app");
+            // アペンダを取得 TODO 20170222
+            // FileAppender appender_ = (FileAppender) logger_.getAppender("app");
             // アペンダにファイル名設定
-            appender_.setFile(filePath_);
+            // appender_.setFile(filePath_);
             // アペンダを初期化
-            appender_.activateOptions();
+            // appender_.activateOptions();
             // ログ出力
             for (String write_ : logContent) {
                 logger_.info(write_);
@@ -355,7 +356,7 @@ public final class LogUtils {
     public static void start(Object... _params) {
 
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.DEBUG)) {
+        if (!loggerFramework.isEnabled(Level.DEBUG)) {
             return;
         }
 
@@ -372,7 +373,7 @@ public final class LogUtils {
     public static void end(Object... _params) {
 
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.DEBUG)) {
+        if (!loggerFramework.isEnabled(Level.DEBUG)) {
             return;
         }
 
@@ -409,15 +410,15 @@ public final class LogUtils {
         String time_ = DateUtils.pireod(_startMillis, _endMillis, "mm'm'ss's'SSS'ms'");
 
         // 処理が重いので事前に出力レベルをチェック
-        if (loggerFramework.isEnabledFor(Level.DEBUG)) {
+        if (loggerFramework.isEnabled(Level.DEBUG)) {
             // ログ出力
-            loggerFramework.debug(expandString("[PROC ]", sessionInfo(), quoteCollection(_className, _methodName),
-                time_, _message));
+            loggerFramework.debug(
+                expandString("[PROC ]", sessionInfo(), quoteCollection(_className, _methodName), time_, _message));
             return;
         }
 
         // 処理が重いので事前に出力レベルをチェック
-        if (loggerFramework.isEnabledFor(Level.INFO)) {
+        if (loggerFramework.isEnabled(Level.INFO)) {
             // ログ出力
             loggerFramework
                 .info(expandString("[PROC ]", sessionInfo(), quoteCollection(_className, _methodName), time_));
@@ -433,7 +434,7 @@ public final class LogUtils {
      */
     public static void debug(String _message) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.DEBUG)) {
+        if (!loggerFramework.isEnabled(Level.DEBUG)) {
             return;
         }
         // ログ出力
@@ -447,7 +448,7 @@ public final class LogUtils {
      */
     public static void debugOperate(String _message, boolean _flg) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerOperate.isEnabledFor(Level.INFO)) {
+        if (!loggerOperate.isEnabled(Level.INFO)) {
             return;
         }
         if (_flg == true) {
@@ -469,7 +470,7 @@ public final class LogUtils {
      */
     public static void debug(String _message, Throwable _throwable) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.DEBUG)) {
+        if (!loggerFramework.isEnabled(Level.DEBUG)) {
             return;
         }
         // ログ出力
@@ -483,7 +484,7 @@ public final class LogUtils {
      */
     public static void info(String _message) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.INFO)) {
+        if (!loggerFramework.isEnabled(Level.INFO)) {
             return;
         }
         // ログ出力
@@ -497,7 +498,7 @@ public final class LogUtils {
      */
     public static void warn(String _message) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.WARN)) {
+        if (!loggerFramework.isEnabled(Level.WARN)) {
             return;
         }
         // ログ出力
@@ -512,7 +513,7 @@ public final class LogUtils {
      */
     public static void warn(String _message, Throwable _throwable) {
         // 処理が重いので事前に出力レベルをチェック
-        if (!loggerFramework.isEnabledFor(Level.WARN)) {
+        if (!loggerFramework.isEnabled(Level.WARN)) {
             return;
         }
         // ログ出力
