@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="common" extends="basePackage" strict-method-invocation="false">
+        <!-- 菜单起動 -->
+        <action name="menuBootAction_*" class="cn.com.prescription.leshan.common.action.MenuBootAction" method="{1}">
+           <result name="success">/pages/jsp/common/menuBoot.jsp</result>
+           <result name="error">/pages/jsp/common/multiple_boot_error.jsp</result>
+        </action>
+    </package>
+</struts>

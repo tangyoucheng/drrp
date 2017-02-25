@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<package name="framework" extends="basePackage" strict-method-invocation="false">
+		
+		<action name="dialogAction_*"
+			class="cn.com.prescription.framework.common.component.dialog.DialogAction"
+			method="{1}">
+			<result name="success" type="">/pages/jsp/common/dialog.jsp</result>
+		</action>
+
+		<action name="downloadAction_*"
+			class="cn.com.prescription.framework.common.component.download.DownloadAction"
+			method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+				<param name="bufferSize">${bufferSize}</param>
+				<param name="contentDisposition">${contentDisposition}</param>
+				<param name="contentLength">${contentLength}</param>
+				<param name="contentType">${contentType}</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="service" extends="basePackage" strict-method-invocation="false">
+		<action name="start" class="cn.com.prescription.framework.common.component.service.ServiceControlAction" method="Start">
+			<result>/pages/jsp/common/service.jsp</result>
+		</action>
+		<action name="stop" class="cn.com.prescription.framework.common.component.service.ServiceControlAction" method="Stop">
+			<result>/pages/jsp/common/service.jsp</result>
+		</action>
+	</package>
+	
+	
+
+</struts>

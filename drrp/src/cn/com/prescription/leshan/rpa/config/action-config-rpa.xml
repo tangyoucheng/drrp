@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="rpa" extends="basePackage" strict-method-invocation="false">
+        <!-- 处方添加 -->
+        <action name="rpa00101Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00101Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00101.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00101.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00101.jsp</result>
+        </action>
+        <!-- 处方一览 -->
+        <action name="rpa00102Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00102Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00102.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00102.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00102.jsp</result>
+        </action>
+        <!-- 处方编辑 -->
+        <action name="rpa00103Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00103Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00103.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00103.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00103.jsp</result>
+        </action>
+        <!-- 处方调配 -->
+        <action name="rpa00104Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00104Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00104.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00104.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00104.jsp</result>
+        </action>
+        <!-- 处方审核 -->
+        <action name="rpa00105Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00105Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00105.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00105.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00105.jsp</result>
+        </action>
+        <!-- 处方一览 -->
+        <action name="rpa00109Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00109Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00109.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00109.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00109.jsp</result>
+        </action>
+        <!-- 处方手写弹出画面 -->
+        <action name="rpa00150Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00150Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00150.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00150.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00150.jsp</result>
+        </action>
+        <!-- 患者信息添加 -->
+        <action name="rpa00201Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00201Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00201.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00201.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00201.jsp</result>
+        </action>
+        <!-- 患者信息一览 -->
+        <action name="rpa00202Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00202Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00202.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00202.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00202.jsp</result>
+        </action>
+        <!-- 患者信息编辑 -->
+        <action name="rpa00203Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00203Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00203.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00203.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00203.jsp</result>
+        </action>
+        <!-- 患者信息一览弹出画面 -->
+        <action name="rpa00204Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00204Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00204.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00204.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00204.jsp</result>
+        </action>
+        <!-- 患者信息导出画面 -->
+        <action name="rpa00205Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00205Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00205.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00205.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00205.jsp</result>
+        </action>
+        <!-- 打印患者信息画面 -->
+        <action name="rpa00206Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00206Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00206.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00206.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00206.jsp</result>
+        </action>
+        <!-- 药品信息添加 -->
+        <action name="rpa00301Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00301Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00301.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00301.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00301.jsp</result>
+        </action>
+        <!-- 药品信息一览 -->
+        <action name="rpa00302Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00302Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00302.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00302.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00302.jsp</result>
+        </action>
+        <!-- 药品信息编辑 -->
+        <action name="rpa00303Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00303Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00303.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00303.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00303.jsp</result>
+        </action>
+        <!-- 药品信息一览弹出画面 -->
+        <action name="rpa00304Action_*"
+            class="cn.com.prescription.leshan.rpa.action.RPA00304Action" method="{1}">
+            <result name="input">/pages/jsp/rpa/rpa00304.jsp</result>
+            <result name="error">/pages/jsp/rpa/rpa00304.jsp</result>
+            <result name="success">/pages/jsp/rpa/rpa00304.jsp</result>
+        </action>
+    </package>
+</struts>

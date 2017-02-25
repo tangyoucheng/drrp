@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+    "http://www.seasar.org/dtd/components21.dtd">
+<components>
+    <include path="allaop.dicon"/>
+    <include path="aop.dicon"/>
+    <include path="convention.dicon"/>
+    <include path="s2jdbc.dicon"/>
+    <!-- 業務系DAOコンポーネント自動登録 -->
+    <component class="org.seasar.framework.container.autoregister.ComponentAutoRegister">
+        <property name="autoNaming">
+            <component class="org.seasar.framework.container.autoregister.DefaultAutoNaming"/>
+        </property>
+        <initMethod name="addReferenceClass">
+            <arg>@cn.com.prescription.framework.StandardConstantsIF@class</arg>
+        </initMethod>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.leshan"</arg>
+            <arg>".*Dao"</arg>
+        </initMethod>
+    </component>
+
+    <!-- 業務系DAOコンポーネントAOP登録 -->
+    <component class="org.seasar.framework.container.autoregister.AspectAutoRegister">
+        <property name="interceptor">daoInterceptorChain</property>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.leshan"</arg>
+            <arg>".*Dao"</arg>
+        </initMethod>
+    </component>
+
+    <!-- 業務系ロジックコンポーネント自動登録 -->
+    <component class="org.seasar.framework.container.autoregister.ComponentAutoRegister">
+        <property name="instanceDef">
+            @org.seasar.framework.container.deployer.InstanceDefFactory@PROTOTYPE
+        </property>
+        <property name="autoNaming">
+            <component class="org.seasar.framework.container.autoregister.DefaultAutoNaming"/>
+        </property>
+        <initMethod name="addReferenceClass">
+            <arg>@cn.com.prescription.framework.StandardConstantsIF@class</arg>
+        </initMethod>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.leshan"</arg>
+            <arg>".*Logic"</arg>
+        </initMethod>
+    </component>
+
+    <!-- 業務系ロジックコンポーネントAOP登録 -->
+    <component class="org.seasar.framework.container.autoregister.AspectAutoRegister">
+        <property name="interceptor">logicInterceptorChain</property>
+        <property name="pointcut">"(service|cleanup)"</property>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.leshan"</arg>
+            <arg>".*Logic"</arg>
+        </initMethod>
+    </component>
+
+       <!-- 基盤系DAOコンポーネント自動登録 -->
+    <component class="org.seasar.framework.container.autoregister.ComponentAutoRegister">
+        <property name="autoNaming">
+            <component class="org.seasar.framework.container.autoregister.DefaultAutoNaming"/>
+        </property>
+        <initMethod name="addReferenceClass">
+            <arg>@cn.com.prescription.framework.StandardConstantsIF@class</arg>
+        </initMethod>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.framework"</arg>
+            <arg>".*Dao"</arg>
+        </initMethod>
+    </component>
+
+       <!-- 基盤系DAOコンポーネントAOP登録 -->
+    <component class="org.seasar.framework.container.autoregister.AspectAutoRegister">
+        <property name="interceptor">daoInterceptorChain</property>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.framework"</arg>
+            <arg>".*Dao"</arg>
+        </initMethod>
+    </component>
+
+       <!-- 基盤系ロジックコンポーネント自動登録 -->
+    <component class="org.seasar.framework.container.autoregister.ComponentAutoRegister">
+        <property name="instanceDef">
+            @org.seasar.framework.container.deployer.InstanceDefFactory@PROTOTYPE
+        </property>
+        <property name="autoNaming">
+            <component class="org.seasar.framework.container.autoregister.DefaultAutoNaming"/>
+        </property>
+        <initMethod name="addReferenceClass">
+            <arg>@cn.com.prescription.framework.StandardConstantsIF@class</arg>
+        </initMethod>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.framework.common.component"</arg>
+            <arg>".*Logic"</arg>
+        </initMethod>
+    </component>
+
+       <!-- 基盤系ロジックコンポーネントAOP登録 -->
+    <component class="org.seasar.framework.container.autoregister.AspectAutoRegister">
+        <property name="interceptor">logicInterceptorChain</property>
+        <property name="pointcut">"(service|cleanup)"</property>
+        <initMethod name="addClassPattern">
+            <arg>"cn.com.prescription.framework.common.component"</arg>
+            <arg>".*Logic"</arg>
+        </initMethod>
+    </component>
+
+</components>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event-config>
+    <event-group>
+        <event-key>standard</event-key>
+        <event-class>cn.com.prescription.framework.event.StandardEvent</event-class>
+        <event-factory>
+            <factory-class>org.intra_mart.framework.extension.seasar.event.S2EventListenerFactory</factory-class>
+            <init-param>
+                <param-name>listener</param-name>
+                <param-value>cn.com.prescription.framework.event.StandardEventListener</param-value>
+            </init-param>
+        </event-factory>
+    </event-group>
+</event-config>

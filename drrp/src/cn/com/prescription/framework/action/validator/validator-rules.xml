@@ -1,0 +1,205 @@
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+          
+<!-- - バリデーションルール定義ファイル。 - - @author t.d.m - @since 1.0 -->
+<form-validation>
+	<global>
+
+		<!-- 必須チェック -->
+		<validator name="required"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateRequired" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.required" />
+
+		<!-- 形式チェック -->
+		<validator name="hankaku"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateHalfWidth" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.hankaku" />
+
+		<validator name="zenkaku"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateFullWidth" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.zenkaku" />
+
+		<validator name="alphabet"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphabet" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphabet" />
+
+		<validator name="alphaNum"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphaNum" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphaNum" />
+		<validator name="alphaNumMix"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphaNumMix" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphaNumMix" />
+		<validator name="alphaCapitalChar"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphaCapitalChar" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphaCapitalChar" />
+
+		<validator name="alphaNumCapitalChar"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphaNumCapitalChar" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphaNumCapitalChar" />
+
+		<validator name="numeric"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateNumeric" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.numeric" />
+
+		<validator name="digits"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateDigits" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.digits" />
+
+		<validator name="hankakuKana"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateHankakuKana" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.hankakuKana" />
+
+		<validator name="zenkakuKana"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateZenkakuKana" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.zenkakuKana" />
+
+		<validator name="alphaKana"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAlphaKana" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.alphaKana" />
+
+		<validator name="capitalChar"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateCapitalChar" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.capitalChar" />
+
+		<!-- <validator name="smallChar" classname="cn.com.prescription.framework.action.validator.FieldChecks" 
+			method="validateSmallChar" methodParams="java.lang.Object, org.apache.commons.validator.Field" 
+			msg="validator.error.smallChar" /> -->
+
+		<validator name="mailAddress"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMailAddress" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.mailAddress" />
+
+		<validator name="url"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateUrl" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.url" />
+
+		<validator name="dateFormat"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateDateFormat" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.dateFormat" />
+
+		<validator name="forbiddenChar"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateForbiddenChar" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.forbiddenChar">
+		</validator>
+
+		<validator name="allowedChar"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateAllowedChar" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.allowedChar" />
+
+		<validator name="regExp"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateRegExp" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.regExp" />
+
+		<!-- 桁チェック -->
+		<validator name="justByteSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateJustByteSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.justByteSize" />
+
+		<validator name="maxByteSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMaxByteSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.maxByteSize" />
+
+		<validator name="minByteSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMinByteSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.minByteSize" />
+
+		<validator name="significantFigures"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateSignificantFigures" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.significantFigures" />
+
+		<!-- 文字数チェック -->
+		<validator name="justSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateJustSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.justSize" />
+
+		<validator name="maxSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMaxSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.maxSize" />
+
+		<validator name="minSize"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMinSize" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.minSize" />
+
+		<!-- 範囲チェック -->
+		<validator name="maxValue"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMaxValue" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.maxValue" />
+
+		<validator name="minValue"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMinValue" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.minValue" />
+
+		<validator name="compareDate"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateCompareDate" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.compareDate" />
+
+		<validator name="compareDecimal"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateCompareDecimal" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.compareDecimal" />
+
+		<validator name="mobile"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateMobile" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.mobile" />
+
+		<validator name="tell"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateTell" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.tell" />
+
+
+		<validator name="post"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validatePost" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.post" />
+
+		<validator name="danchiId"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateDanchiId" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.danchiId" />
+
+		<validator name="blockId"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateBlockId" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.blockId" />
+
+		<validator name="jyutakuBango"
+			classname="cn.com.prescription.framework.action.validator.FieldChecks"
+			method="validateJyutakuBango" methodParams="java.lang.Object, org.apache.commons.validator.Field"
+			msg="validator.error.jyutakuBango" />
+
+	</global>
+
+</form-validation>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+        
+<form-validation>
+    <formset>
+        <!-- rpb00101 门店信息编辑画面 -->
+        <form name="rpb00101Action#doUpdate">
+            <field property="storeName" depends="required">
+                <arg key="门店名" resource="false" />
+            </field>
+            <field property="rpCodePrefix" depends="required">
+                <arg key="处方单前缀" resource="false" />
+            </field>
+        </form>
+    </formset>
+</form-validation>

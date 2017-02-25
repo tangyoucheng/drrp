@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <include file="struts-default.xml" />
+    <include file="struts-base.xml"/>
+
+    <!-- 框架 -->
+    <include file="cn/com/prescription/framework/common/config/action-config-framework.xml" />
+
+    <!-- 共通 -->
+    <include file="cn/com/prescription/leshan/common/config/action-config-common-ajax.xml" />
+    <include file="cn/com/prescription/leshan/common/config/action-config-common.xml" />
+
+    <!-- 系统管理 -->
+    <include file="cn/com/prescription/leshan/rpm/config/action-config-rpm-ajax.xml" />
+    <include file="cn/com/prescription/leshan/rpm/config/action-config-rpm.xml" />
+    
+    <include file="cn/com/prescription/leshan/rpa/config/action-config-rpa-ajax.xml" />
+    <include file="cn/com/prescription/leshan/rpa/config/action-config-rpa.xml" />
+    
+    <include file="cn/com/prescription/leshan/rpb/config/action-config-rpb-ajax.xml" />
+    <include file="cn/com/prescription/leshan/rpb/config/action-config-rpb.xml" />
+    
+    <!-- 其他 -->
+    <include file="cn/com/prescription/leshan/scz/config/action-config-scz-ajax.xml" />
+    <include file="cn/com/prescription/leshan/scz/config/action-config-scz.xml" />
+</struts>

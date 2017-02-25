@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.locale" value="zh_CN" />
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.custom.i18n.resources" value="messageResource" />
+    <constant name="struts.action.extension" value="do,b" />
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.i18n.reload" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <constant name="struts.xslt.nocache" value="true" />
+    <!-- Enable Freemarker template caching -->
+    <constant name="struts.freemarker.templatesCache" value="true" />
+    <constant name="struts.multipart.maxSize" value="10000971520" />
+
+    <!-- <constant name="struts.custom.i18n.resources" value="message_validate" 
+        /> -->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    <!-- <constant name="struts.url.includeParams" value="none" /> -->
+    <!-- <constant name="struts.url.includeParams" value="none" /> -->
+
+    <package name="basePackage" extends="struts-default" abstract="AbstractAction">
+
+        <interceptors>
+            <interceptor name="runValidation"
+                class="cn.com.prescription.framework.common.interceptor.RunInterceptor" />
+            <interceptor name="beforeValidation"
+                class="cn.com.prescription.framework.common.interceptor.ValidationInterceptor" />
+<!--            <interceptor name="checklogin" -->
+<!--                class="cn.com.prescription.framework.common.interceptor.CheckLoginInterceptor" /> -->
+            <interceptor name="actionInterceptor"
+                class="cn.com.prescription.framework.common.interceptor.ActionInterceptor" />
+            <interceptor-stack name="actionDefault">
+                <interceptor-ref name="exception"/>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="datetime"/>
+                <interceptor-ref name="multiselect"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="runValidation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="beforeValidation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+<!--                <interceptor-ref name="checklogin"> -->
+<!--                    <param name="sessionInitLogic">cn.com.prescription.meishan.schm.biz.SCHM00201LoginLogic</param> -->
+<!--                </interceptor-ref> -->
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="actionInterceptor" />
+            </interceptor-stack>           
+
+       </interceptors>
+       
+        <default-interceptor-ref name="actionDefault" />
+        
+        <global-results>
+            <result name="application">/pages/jsp/common/application_error.jsp</result>
+<!--            <result name="loginErr">/pages/jsp/common/login_error.jsp</result> -->
+            <result name="system">/pages/jsp/common/system_error.jsp</result>
+            <result name="upload_json">/pages/jsp/COMFileUpload/upload_json.jsp</result>
+            <result name="delete_json">/pages/jsp/COMFileUpload/delete_json.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping result="application" exception="cn.com.prescription.framework.exception.ApplicationException" />
+<!--            <exception-mapping result="loginErr" exception="cn.com.prescription.framework.exception.LoginErrorException" /> -->
+            <exception-mapping result="system" exception="cn.com.prescription.framework.exception.SystemException" />
+            <exception-mapping result="system" exception="java.lang.Exception" />
+        </global-exception-mappings>
+
+    </package>
+
+    <package name="baseJson" extends="json-default">
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"
+                default="true">
+                <param name="ignoreHierarchy">false</param>
+            </result-type>
+        </result-types>
+        <interceptors>
+            <interceptor name="runValidation"
+                class="cn.com.prescription.framework.common.interceptor.RunInterceptor" />
+            <interceptor name="beforeValidation"
+                class="cn.com.prescription.framework.common.interceptor.ValidationInterceptor" />
+<!--            <interceptor name="checklogin" -->
+<!--                class="cn.com.prescription.framework.common.interceptor.CheckLoginInterceptor" /> -->
+            <interceptor name="actionInterceptor"
+                class="cn.com.prescription.framework.common.interceptor.ActionInterceptor" />
+            <interceptor-stack name="jsonDefault">
+                <interceptor-ref name="exception"/>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="datetime"/>
+                <interceptor-ref name="multiselect"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="runValidation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+<!--                <interceptor-ref name="beforeValidation"> -->
+<!--                    <param name="excludeMethods">input,back,cancel,browse</param> -->
+<!--                </interceptor-ref> -->
+<!--                <interceptor-ref name="checklogin"> -->
+<!--                    <param name="sessionInitLogic">cn.com.prescription.meishan.schm.biz.SCHM00201LoginLogic</param> -->
+<!--                </interceptor-ref> -->
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="actionInterceptor" />
+            </interceptor-stack>     
+        </interceptors>
+        <default-interceptor-ref name="jsonDefault" />
+    </package>
+
+</struts>

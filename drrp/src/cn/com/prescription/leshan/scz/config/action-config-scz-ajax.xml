@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="sczJsonData" extends="baseJson" strict-method-invocation="false">
+		<!--画面ログアウト機能-->
+    	<action name="scz990101Json_*" class="cn.com.prescription.leshan.scz.action.SCZ990101Action" method="{1}">
+            <result type="json"/>
+        </action>
+		<!--画面ロック機能-->
+    	<action name="scz9902Json_*" class="cn.com.prescription.leshan.scz.action.SCZ9902Action" method="{1}">
+            <result type="json"/>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,465 @@
+@charset "UTF-8";
+
+/* ************************************************************
+【クラス】単一クラスに対するスタイルを指定
+************************************************************ */
+.aid_writingbox {
+    display: block;
+    float: left;
+    width: auto;
+}
+
+.aidbtn_storage {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.arrowbtn_writingbox {
+    display: block;
+    width: 170px;;
+    float: right;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.assist_spot {
+    background: #dadada;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.assist_text {
+    display: block;
+    font-size: .8em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.change_entry_color {
+    background: #A9CFD4;
+    padding: 0 20px;
+}
+
+.check_and_tile_wrap {
+    float: left;
+    margin: 3px 5px 0 0;
+    width: 90px;
+}
+
+.color1 {
+    background: #FF7881;
+}
+
+.color2 {
+    background: #EFF540;
+}
+
+.color_pic {
+    height: 20px;
+    margin-left: 5px;
+}
+
+.colorpic {
+    margin-right: 3px;
+    padding: 6px 12px;
+}
+
+.content_tabheader_f_left {
+    float: left;
+    padding-top: 5px;
+    width: 100px;
+}
+
+.content_tabheader_f_right {
+    float: right;
+    padding-top: 5px;
+    width: 100px;
+}
+
+.content_tabheader_tabbox {
+    float: left;
+    width: 520px;
+}
+
+.content_tabheader_wrap {
+    background: url(../../img/tabbox_bg.gif) no-repeat 0 bottom;
+    margin: 0 0 10px;
+    overflow: hidden;
+    width: 730px;
+    zoom: 1;
+}
+
+.content_tabheader_wrap_nobg {
+    margin: 0 0 10px;
+    overflow: hidden;
+    width: 730px;
+    zoom: 1;
+}
+
+.contenthead_navi_area {
+    background: #E0E0E0;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 5px;
+    zoom: 1;
+}
+
+.entry_content_table {
+    width: 100%;
+}
+
+.entryout_label {
+    margin-bottom: 3px;
+    zoom: 1;
+}
+
+.errorMessage {
+    color: red;
+    list-style-type: none;
+}
+
+.error_message {
+    background-color: #FFC2A6;
+    display: block;
+    padding: 3px 3px 3px 15px;
+}
+
+.error_spot {
+    border: solid 1px #F55D3B;
+    line-height: 18px;
+    margin: 10px 0 20px;
+    padding: 2px 2px 1px;
+    text-align: center;
+}
+
+.font_bold {
+    zoom: 1.2;
+    font-weight: 700;
+}
+/* 20120203 修正　start */
+.guide_btn_area {
+    background: #B7D7EB;
+    clear: both;
+    overflow: hidden;
+    padding: 1px;
+    zoom: 1;
+    height: 40px;
+    margin-top: 10px;
+}
+/* 20120203 修正　end */
+
+.guide_btn_table {
+    margin: 2px;
+    table-layout: fixed;
+}
+
+.import_result {
+    margin: 10px auto;
+    overflow: hidden;
+    width: 210px;
+    zoom: 1;
+}
+
+.in_deletebtn {
+    width: 60px;
+}
+
+.info_content {
+    margin-right: 5px;
+}
+
+.lineup_set_form {
+    vertical-align: top;
+}
+
+.login_table {
+    margin: 20px auto 0;
+}
+
+.message_spot {
+    background: url(../../img/border_repe_bg_assist.png);
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.middle_box {
+    margin: 20px auto 30px;
+    width: 500px;
+}
+
+.mustentry {
+    width: 33px;
+}
+
+.mustdata {
+    background-color:#FFDCDC;
+}
+
+.readonlydata {
+    background-color:#D1F1FF;
+}
+
+.noscroll_table {
+    background: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 10px auto 5px;
+    table-layout: fixed;
+    width: 730px;
+}
+
+.organization_img {
+    border: solid 1px #7D7D7D;
+    display: block;
+    height: 60px;
+    margin: 3px 0 5px;
+    width: 60px;
+}
+
+.result_box {
+    border: solid 1px #c6c6c6;
+    border-bottom-style: none;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.result_title {
+    background: #c6c6c6;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.row_confirm_table {
+    background-color: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 5px auto 20px;
+    width: 100%;
+}
+
+.row_table {
+    background-color: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 5px auto 20px;
+    width: 100%;
+    table-layout:fixed;
+}
+
+.saturday {
+    color: #1821D9;
+}
+
+.scroll_div {
+    height: 320px;
+    margin: 0 auto 5px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.scroll_height_low {
+    height: 200px;
+    margin: 0 auto 5px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.search_content_table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 10px 10px 5px;
+    table-layout: fixed;
+}
+
+.short_box {
+    margin: 20px auto 30px;
+    width: 450px;
+}
+
+.spot_inbtn_storage {
+    margin: 10px auto 0;
+    overflow: hidden;
+    width: 100px;
+    zoom: 1;
+}
+
+.student_img_ref {
+    display: block;
+    overflow: hidden;
+    width: 90px;
+    zoom: 1;
+}
+
+.sunday {
+    color: #B50505;
+}
+
+.table_number {
+    display: block;
+    float: right;
+    font-size: 13px;
+    font-weight: 400;
+    width: 300px;
+}
+
+.table_out {
+    float: left;
+    margin-bottom: 5px;
+    padding: 1px;
+}
+
+.timetable_infoarea {
+    margin: 0 auto 10px;
+    overflow: hidden;
+    width: 630px;
+    zoom: 1;
+}
+
+.wrap_table_number_center {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 400px;
+    zoom: 1;
+}
+
+.wrap_table_row1 {
+    width: 100px;
+}
+
+.wrap_table_row2 {
+    width: 310px;
+}
+
+.wrap_table_row3 {
+    width: 310px;
+}
+
+.vertical_middle {
+    vertical-align: middle;
+}
+
+/* 20130207 追加 start*/
+.idTabs { margin-top:10px;margin-bottom:10px; width: 100%;background:#D1F1FF; }
+.idTabs ul { background:#CEE2F5; text-align: center;}
+.idTabs li { list-style:none; /*Try deleting this float*/ float:left;width: 120px;}
+.idTabs a { display:block; background:#FFFFFF; color:#000000; padding:5px 13px; /*font:bold 11pt Arial;*/ text-decoration:none; }
+.idTabs a:hover { background-color:#E3EDF3; color:#000; }
+.idTabs a.selected { background:#B7D7EB; color:#000; }
+.tabItem { display:none; }
+.idTabs ul, .idTabs a { border-radius:4px; -moz-border-radius:4px; }
+/* 20130207 追加 end*/
+
+/*20120802 追加 Start */
+.scroll_table_title {
+    background-color: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: -1px 0px 0px 0px;
+    width: 100%;
+    table-layout: fixed;
+}
+.scroll_table {
+    background-color: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: -1px 0px 0px 0px;
+    width: 100%;
+    table-layout: fixed;
+}
+.scroll_div_1 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 29px;
+}
+.scroll_div_2 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 58px;
+}
+.scroll_div_3 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 87px;
+}
+.scroll_div_4 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 116px;
+}
+.scroll_div_5 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 145px;
+}
+.scroll_div_6 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 174px;
+}
+.scroll_div_8 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 232px;
+}
+.scroll_div_9 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 261px;
+}
+.scroll_div_10 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 290px;
+}
+.scroll_div_14 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 406px;
+}
+.scroll_div_16 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 464px;
+}
+.scroll_div_18 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 522px;
+}
+.scroll_div_20 {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 580px;
+}
+/*20120802 追加 end */
+/*20121122 追加 START */
+.dialogue_row_table {
+    background-color: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 5px auto 20px;
+    width: 100%;
+    table-layout:fixed;
+}
+/*20121122 追加 end */
+/*20130123 追加 START */
+.status{
+    font-family:font-family: "Microsoft YaHei",'微软雅黑',"Arial","黑体","宋体",sans-serif;;
+    font-size:14px;
+    width:16px;
+    height:16px;
+    border:solid 1px;
+    cursor:hand;
+    display:block;
+    float:left;
+    text-align: center;
+    margin-right: 3px;
+    clear:both;
+}
+/*20130123 追加 end */

@@ -1,0 +1,27 @@
+
+#signatureparent {
+  color:darkblue;
+  background-color:lightgrey;
+  padding: 0px;
+}
+
+#signature {
+  padding: 0 0 0 0; 
+  margin: 0 0 0 0;
+  border: 2px dotted #000;
+}
+
+#displayareaparent {
+  padding: 0 0 0 0; 
+  margin: 0 0 0 0;
+  border: 2px dotted #000;
+}
+
+.shrinkwidth_parent 
+{
+    text-align:center;
+}
+.shrinkwidth_parent span
+{
+    display: inline-block;
+}

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="rpb" extends="basePackage" strict-method-invocation="false">
+        <!-- 门店信息编辑 -->
+        <action name="rpb00101Action_*"
+            class="cn.com.prescription.leshan.rpb.action.RPB00101Action" method="{1}">
+            <result name="input">/pages/jsp/rpb/rpb00101.jsp</result>
+            <result name="error">/pages/jsp/rpb/rpb00101.jsp</result>
+            <result name="success">/pages/jsp/rpb/rpb00101.jsp</result>
+        </action>
+    </package>
+</struts>

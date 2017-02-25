@@ -1,0 +1,1148 @@
+@charset "UTF-8";
+
+/* ************************************************************
+【画像ボタン（共通）】イメージファイルで構成されるボタン
+************************************************************ */
+{
+}
+/* ************************************************************
+ メインボタン
+************************************************************ */
+.add_mainbtn,.add_mainbtn_off,.back_mainbtn,.back_mainbtn_off,.cancel_mainbtn,.cancel_mainbtn_bg_ov,.close_mainbtn,.extraction_mainbtn,.select_mainbtn,.confirm_mainbtn,.confirm_mainbtn_off,.csv_mainbtn,.csv_mainbtn_off,.delete_mainbtn,.delete_mainbtn_off,.edit_mainbtn,.edit_mainbtn_off,.entry_mainbtn,.entry_mainbtn_off,.fix_mainbtn,.fix_mainbtn_off,.import_mainbtn,.import_mainbtn_off,.next_mainbtn,.next_mainbtn_off,.paste_mainbtn,.paste_mainbtn_off,.print_mainbtn,.print_mainbtn_off,.run_mainbtn,.run_mainbtn_off,.search_mainbtn,.search_mainbtn_off,.ido_mainbtn,.ido_mainbtn_off,.refresh_mainbtn,.settei_mainbtn,.settei_mainbtn_off ,.torimodoshi_mainbtn,.toriyame_mainbtn,.ichijihokan_mainbtn,.hiketsu_mainbtn,.sashimodoshi_mainbtn,.shounin_mainbtn{
+    display: block;
+    height: 30px;
+    margin: auto;
+    width: 71px;
+    border: 1px none;
+    cursor: pointer;
+}
+
+/*「追加」*/
+.add_mainbtn {
+    background: url(../../img/add_mainbtn_bg.gif) no-repeat;
+}
+
+.add_mainbtn:hover {
+    background: url(../../img/add_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.add_mainbtn_off {
+    background: url(../../img/add_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「戻る」 */
+.back_mainbtn {
+    background: url(../../img/back_mainbtn_bg.gif) no-repeat;
+}
+
+.back_mainbtn:hover {
+    background: url(../../img/back_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.back_mainbtn_off {
+    background: url(../../img/back_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「キャンセル」 */
+.cancel_mainbtn {
+    background: url(../../img/cancel_mainbtn_bg.gif) no-repeat;
+}
+
+.cancel_mainbtn:hover {
+    background: url(../../img/cancel_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「抽出」 */
+.extraction_mainbtn {
+    background: url(../../img/extraction_mainbtn_bg.gif) no-repeat;
+}
+
+.extraction_mainbtn:hover {
+    background: url(../../img/extraction_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「選択」 */
+.select_mainbtn {
+    background: url(../../img/select_mainbtn_bg.gif) no-repeat;
+}
+
+.select_mainbtn:hover {
+    background: url(../../img/select_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「閉じる」 */
+.close_mainbtn {
+    background: url(../../img/close_mainbtn_bg.gif) no-repeat;
+}
+
+.close_mainbtn:hover {
+    background: url(../../img/close_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「確認」 */
+.confirm_mainbtn {
+    background: url(../../img/confirm_mainbtn_bg.gif) no-repeat;
+}
+
+.confirm_mainbtn:hover {
+    background: url(../../img/confirm_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.confirm_mainbtn_off {
+    background: url(../../img/confirm_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「CSV」 */
+.csv_mainbtn {
+    background: url(../../img/csv_mainbtn_bg.gif) no-repeat;
+}
+
+.csv_mainbtn:hover {
+    background: url(../../img/csv_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.csv_mainbtn_off {
+    background: url(../../img/csv_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「削除」 */
+.delete_mainbtn {
+    background: url(../../img/delete_mainbtn_bg.gif) no-repeat;
+}
+
+.delete_mainbtn:hover {
+    background: url(../../img/delete_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.delete_mainbtn_off {
+    background: url(../../img/delete_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「编辑」 */
+.edit_mainbtn {
+    background: url(../../img/edit_mainbtn_bg.gif) no-repeat;
+}
+
+.edit_mainbtn:hover {
+    background: url(../../img/edit_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.edit_mainbtn_off {
+    background: url(../../img/edit_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「登録」 */
+.entry_mainbtn {
+    background: url(../../img/entry_mainbtn_bg.gif) no-repeat;
+}
+
+.entry_mainbtn:hover {
+    background: url(../../img/entry_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.entry_mainbtn_off {
+    background: url(../../img/entry_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「確定」 */
+.fix_mainbtn {
+    background: url(../../img/fix_mainbtn_bg.gif) no-repeat;
+}
+
+.fix_mainbtn:hover {
+    background: url(../../img/fix_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.fix_mainbtn_off {
+    background: url(../../img/fix_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「取込」 */
+.import_mainbtn {
+    background: url(../../img/import_mainbtn_bg.gif) no-repeat;
+}
+
+.import_mainbtn:hover {
+    background: url(../../img/import_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.import_mainbtn_off {
+    background: url(../../img/import_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「次へ」 */
+.next_mainbtn {
+    background: url(../../img/next_mainbtn_bg.gif) no-repeat;
+}
+
+.next_mainbtn:hover {
+    background: url(../../img/next_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.next_mainbtn_off {
+    background: url(../../img/next_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「貼付」 */
+.paste_mainbtn {
+    background: url(../../img/paste_mainbtn_bg.gif) no-repeat;
+}
+
+.paste_mainbtn:hover {
+    background: url(../../img/paste_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.paste_mainbtn_off {
+    background: url(../../img/paste_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「印刷」 */
+.print_mainbtn {
+    background: url(../../img/print_mainbtn_bg.gif) no-repeat;
+}
+
+.print_mainbtn:hover {
+    background: url(../../img/print_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.print_mainbtn_off {
+    background: url(../../img/print_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「実行」 */
+.run_mainbtn {
+    background: url(../../img/run_mainbtn_bg.gif) no-repeat;
+}
+
+.run_mainbtn:hover {
+    background: url(../../img/run_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.run_mainbtn_off {
+    background: url(../../img/run_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「検索」 */
+.search_mainbtn {
+    background: url(../../img/search_mainbtn_bg.gif) no-repeat;
+}
+
+.search_mainbtn:hover {
+    background: url(../../img/search_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.search_mainbtn_off {
+    background: url(../../img/search_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「異動」 */
+.ido_mainbtn {
+    background: url(../../img/ido_mainbtn_bg.gif) no-repeat;
+}
+
+.ido_mainbtn:hover {
+    background: url(../../img/ido_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.ido_mainbtn_off {
+    background: url(../../img/ido_mainbtn_bg_off.gif) no-repeat;
+}
+
+/* 「再読込」 */
+.refresh_mainbtn {
+    width: 80px;
+    background: url(../../img/refresh_mainbtn_bg.gif) no-repeat;
+}
+
+.refresh_mainbtn:hover {
+    width: 80px;
+    background: url(../../img/refresh_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「設定」 */
+.settei_mainbtn {
+    background: url(../../img/settei_mainbtn_bg.gif) no-repeat;
+}
+
+.settei_mainbtn:hover {
+    background: url(../../img/settei_mainbtn_bg_ov.gif) no-repeat;
+}
+
+.settei_mainbtn_off {
+    background: url(../../img/settei_mainbtn_bg_off.gif) no-repeat;
+}
+
+
+/* ************************************************************
+ トップ菜单情報
+************************************************************ */
+.functionlist_subbtn,.help_subbtn,.logout_subbtn {
+    display: block;
+    height: 37px;
+    width: 66px;
+}
+
+/* 「機能一覧」 */
+.functionlist_subbtn {
+    background: url(../../img/kinou.gif) no-repeat;
+    display: hidden;
+}
+
+.functionlist_subbtn:hover {
+    background: url(../../img/kinou_mo.gif) no-repeat;
+}
+
+/* 「ヘルプ」 */
+.help_subbtn {
+    background: url(../../img/help.gif) no-repeat;
+}
+
+.help_subbtn:hover {
+    background: url(../../img/help_mo.gif) no-repeat;
+}
+
+/* 「ログアウト」 */
+.logout_subbtn {
+    background: url(../../img/logout.gif) no-repeat;
+}
+
+.logout_subbtn:hover {
+    background: url(../../img/logout_mo.gif) no-repeat;
+}
+
+/* ************************************************************
+ トップ菜单文字サイズ変更
+************************************************************ */
+.font_size_subbtn_l,.font_size_subbtn_m,.font_size_subbtn_s {
+    display: block;
+    float: left;
+    height: 18px;
+    margin-right: 5px;
+    width: 27px;
+}
+
+/* フォントサイズ「大」 */
+.font_size_subbtn_l {
+    background: url(../../img/fontbtn_l.gif) no-repeat;
+}
+
+.font_size_subbtn_l:hover {
+    background: url(../../img/fontbtn_l_ovgif.gif) no-repeat;
+}
+
+/* フォントサイズ「中」 */
+.font_size_subbtn_m {
+    background: url(../../img/fontbtn_m.gif) no-repeat;
+}
+
+.font_size_subbtn_m:hover {
+    background: url(../../img/fontbtn_m_ov.gif) no-repeat;
+}
+
+/* フォントサイズ「小」 */
+.font_size_subbtn_s {
+    background: url(../../img/fontbtn_s.gif) no-repeat;
+}
+
+.font_size_subbtn_s:hover {
+    background: url(../../img/fontbtn_s_ov.gif) no-repeat;
+}
+
+/* ************************************************************
+ サブボタン
+************************************************************ */
+.cancell_subbtn,.close_subbtn,.datedisplay_subbtn,.ok_subbtn,.printpreview_subbtn,.reset_subbtn,.reset_subbtn_off,.topback_subbtn {
+    display: block;
+    height: 20px;
+    margin: 3px auto;
+    width: 80px;
+    border: 1px none;
+    cursor: pointer;
+}
+
+/* 「キャンセル」 */
+.cancell_subbtn {
+    background: url(../../img/cancell_subbtn_bg.gif) no-repeat;
+}
+
+.cancell_subbtn:hover {
+    background: url(../../img/cancell_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「閉じる」 */
+.close_subbtn {
+    background: url(../../img/close_subbtn_bg.gif) no-repeat;
+}
+
+.close_subbtn:hover {
+    background: url(../../img/close_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「取込済みデータを表示」 */
+.datedisplay_subbtn {
+    background: url(../../img/datedisplay_subbtn_bg.gif) no-repeat;
+    width: 145px;
+}
+
+.datedisplay_subbtn:hover {
+    background: url(../../img/datedisplay_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「OK」 */
+.ok_subbtn {
+    background: url(../../img/ok_subbtn_bg.gif) no-repeat;
+    width: 100px;
+}
+
+.ok_subbtn:hover {
+    background: url(../../img/ok_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「印刷プレビュー」 */
+.printpreview_subbtn {
+    background: url(../../img/printpreview_subbtn_bg.gif) no-repeat;
+    width: 100px;
+}
+
+.printpreview_subbtn:hover {
+    background: url(../../img/printpreview_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「リセット」 */
+.reset_subbtn {
+    background: url(../../img/reset_subbtn_bg.gif) no-repeat;
+}
+
+.reset_subbtn:hover {
+    background: url(../../img/reset_subbtn_bg_ov.gif) no-repeat;
+}
+
+.reset_subbtn_off {
+    background: url(../../img/reset_subbtn_bg_off.gif) no-repeat;
+    cursor: not-allowed;
+}
+
+/* 「トップに戻る」 */
+.topback_subbtn {
+    background: url(../../img/topback_subbtn_bg.gif) no-repeat;
+    width: 100px;
+}
+
+.topback_subbtn:hover {
+    background: url(../../img/topback_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「新規登録」 */
+.new_add_btn {
+    background: url(../../img/new_making.gif) no-repeat;
+    display: block;
+    float: right;
+    height: 19px;
+    width: 77px;
+}
+
+.new_add_btn:hover {
+    background: url(../../img/new_making_mo.gif) no-repeat;
+}
+
+/* ************************************************************
+ サブボタン（文字列可変）
+************************************************************ */
+.sub_btn {
+    background: url(../../img/subbtn_bg_left.gif) no-repeat left top;
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 8px;
+    width: auto;
+}
+
+.sub_btn span {
+    background: url(../../img/subbtn_bg_right.gif) no-repeat right top;
+    color: #444;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 6px 0;
+}
+
+.sub_btn:hover {
+    background: url(../../img/subbtn_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.sub_btn:hover span {
+    background: url(../../img/subbtn_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン
+************************************************************ */
+.assist_btn,.assist_btn_r,.noclick_btn,.noclick_btn_r {
+    display: block;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.assist_btn span,.assist_btn_r span,.noclick_btn span,.noclick_btn_r span {
+    color: #081E36;
+    display: block;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* ************************************************************
+ アシストボタン（通常）
+************************************************************ */
+.assist_btn {
+    background: url(../../img/assistbtn_bg_left.gif) no-repeat left top;
+    float: left;
+}
+
+.assist_btn span {
+    background: url(../../img/assistbtn_bg_right.gif) no-repeat right top;
+}
+
+.assist_btn:hover {
+    background: url(../../img/assistbtn_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.assist_btn:hover span {
+    background: url(../../img/assistbtn_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン（右寄せ）
+************************************************************ */
+.assist_btn_r {
+    background: url(../../img/assistbtn_bg_left.gif) no-repeat left top;
+    float: right;
+}
+
+.assist_btn_r span {
+    background: url(../../img/assistbtn_bg_right.gif) no-repeat right top;
+}
+
+.assist_btn_r:hover {
+    background: url(../../img/assistbtn_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.assist_btn_r:hover span {
+    background: url(../../img/assistbtn_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン無効状態（通常）
+************************************************************ */
+.noclick_btn {
+    background: url(../../img/noclick_bg_left.gif) no-repeat left top;
+    float: left;
+}
+
+.noclick_btn span {
+    background: url(../../img/noclick_bg_right.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン無効状態（右寄せ）
+************************************************************ */
+.noclick_btn_r {
+    background: url(../../img/noclick_bg_left.gif) no-repeat left top;
+    float: right;
+}
+
+.noclick_btn_r span {
+    background: url(../../img/noclick_bg_right.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン（セル内部）
+************************************************************ */
+.assist_btn_incell,.noclick_btn_incell {
+    display: block;
+    height: 20px;
+    margin: 0 auto 3px;
+    width: 82px;
+}
+
+.assist_btn_incell span,.noclick_btn_incell span {
+    color: #081E36;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* ************************************************************
+ アシストボタン（セル内部）（通常）
+************************************************************ */
+.assist_btn_incell {
+    background: url(../../img/assistbtn_incell_bg_left.gif) no-repeat left top;
+}
+
+.assist_btn_incell span {
+    background: url(../../img/assistbtn_incell_bg_right.gif) no-repeat right top;
+}
+
+.assist_btn_incell:hover {
+    background: url(../../img/assistbtn_incell_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.assist_btn_incell:hover span {
+    background: url(../../img/assistbtn_incell_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ アシストボタン無効状態（セル内部）
+************************************************************ */
+.noclick_btn_incell {
+    background: url(../../img/noclick_incell_bg_left.gif) no-repeat left top;
+}
+
+.noclick_btn_incell span {
+    background: url(../../img/noclick_incell_bg_right.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ ミニボタン
+************************************************************ */
+.del_minibtn,.paste_minibtn {
+    display: inline;
+    height: 15px;
+    width: 16px;
+    border: 1px none;
+    cursor: pointer;
+}
+
+/* 「消」ボタン */
+.del_minibtn {
+    background: url(../../img/del_minibtn_bg.gif) no-repeat right top;
+}
+
+.del_minibtn:hover {
+    background: url(../../img/del_minibtn_bg_ov.gif) no-repeat right top;
+}
+
+/* 「貼」ボタン */
+.paste_minibtn {
+    background: url(../../img/paste_minibtn_bg.gif) no-repeat right top;
+}
+
+.paste_minibtn:hover {
+    background: url(../../img/paste_minibtn_bg_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ 入力項目補助ボタン
+************************************************************ */
+.aid_btn,.aid_btn_r {
+    display: block;
+    height: 20px;
+    margin-right: 8px;
+    width: auto;
+}
+
+.aid_btn span,.aid_btn_r span {
+    color: #fff;
+    display: block;
+    padding: 3px 6px 1px;
+}
+
+/* ************************************************************
+ 入力項目補助ボタン（通常）
+************************************************************ */
+.aid_btn {
+    background: url(../../img/aidbtn_bg_left.gif) no-repeat left top;
+    float: left;
+}
+
+.aid_btn span {
+    background: url(../../img/aidbtn_bg_right.gif) no-repeat right top;
+}
+
+.aid_btn:hover {
+    background: url(../../img/aidbtn_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.aid_btn:hover span {
+    background: url(../../img/aidbtn_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ 入力項目補助ボタン（右寄せ）
+************************************************************ */
+.aid_btn_r {
+    background: url(../../img/aidbtn_bg_left.gif) no-repeat left top;
+    float: right;
+}
+
+.aid_btn_r span {
+    background: url(../../img/aidbtn_bg_right.gif) no-repeat right top;
+}
+
+.aid_btn_r:hover {
+    background: url(../../img/aidbtn_bg_left_ov.gif) no-repeat left top;
+    text-decoration: none;
+}
+
+.aid_btn_r:hover span {
+    background: url(../../img/aidbtn_bg_right_ov.gif) no-repeat right top;
+}
+
+/* ************************************************************
+ 日历補助ボタン
+************************************************************ */
+.aid_btn_calender {
+    background: url(../../img/aidbtn_calender_bg.gif) no-repeat left top;
+    display: block;
+    float: left;
+    height: 25px;
+    margin-right: 8px;
+    width: 25px;
+}
+
+.aid_btn_calender:hover {
+    background: url(../../img/aidbtn_calender_bg_ov.gif) no-repeat left top;
+}
+
+/* ************************************************************
+ ページ切替矢印
+************************************************************ */
+.arrowbtn_first,.arrowbtn_first_no,.arrowbtn_previous,.arrowbtn_previous_no,.arrowbtn_next,.arrowbtn_next_no,.arrowbtn_last,.arrowbtn_last_no {
+    display: block;
+    float: right;
+    height: 15px;
+    margin-left: 10px;
+    width: 33px;
+}
+
+.arrowbtn_first {
+    background: url(../../img/arrow_btn_first.gif) no-repeat;
+}
+
+.arrowbtn_first:hover {
+    background: url(../../img/arrow_btn_first_ov.gif) no-repeat;
+}
+
+.arrowbtn_first_no {
+    background: url(../../img/arrow_btn_first_no.gif) no-repeat;
+}
+
+.arrowbtn_previous {
+    background: url(../../img/arrow_btn_previous.gif) no-repeat;
+}
+
+.arrowbtn_previous:hover {
+    background: url(../../img/arrow_btn_previous_ov.gif) no-repeat;
+}
+
+.arrowbtn_previous_no {
+    background: url(../../img/arrow_btn_previous_no.gif) no-repeat;
+}
+
+.arrowbtn_next {
+    background: url(../../img/arrow_btn_next.gif) no-repeat;
+}
+
+.arrowbtn_next:hover {
+    background: url(../../img/arrow_btn_next_ov.gif) no-repeat;
+}
+
+.arrowbtn_next_no {
+    background: url(../../img/arrow_btn_next_no.gif) no-repeat;
+}
+
+.arrowbtn_last {
+    background: url(../../img/arrow_btn_last.gif) no-repeat;
+}
+
+.arrowbtn_last:hover {
+    background: url(../../img/arrow_btn_last_ov.gif) no-repeat;
+}
+
+.arrowbtn_last_no {
+    background: url(../../img/arrow_btn_last_no.gif) no-repeat;
+}
+/* 20120203 修正　start */
+/* ************************************************************
+ マイ菜单ブックマーク
+************************************************************ */
+.bookmark_btn,.bookmark_del_btn {
+    display: block;
+    float: right;
+    height: 30px;
+    width: 150px;
+}
+
+/* ************************************************************
+ マイ菜单ブックマーク：登録
+************************************************************ */
+.bookmark_btn {
+    background: url(../../img/bookmark_btn.gif) no-repeat 0px 4px;
+}
+
+.bookmark_btn:hover {
+    background: url(../../img/bookmark_btn_ov.gif) no-repeat 0px 4px;
+    cursor: pointer;
+}
+
+/* ************************************************************
+ マイ菜单ブックマーク：削除
+************************************************************ */
+.bookmark_del_btn {
+    background: url(../../img/bookmark_btn_delete.gif) no-repeat 0px 4px;
+}
+
+.bookmark_del_btn:hover {
+    background: url(../../img/bookmark_btn_delete_ov.gif) no-repeat 0px 4px;
+    cursor: pointer;
+}
+/* 20120203 修正　end */
+/* ************************************************************
+ 日历菜单
+************************************************************ */
+.calendar_left {
+    background: url(../../img/week_last_off.gif) no-repeat;
+    display: block;
+    height: 39px;
+    margin-right: 3px;
+    width: 16px;
+}
+
+.calendar_left:hover {
+    background: url(../../img/week_last_mo.gif) no-repeat;
+}
+
+.calendar_normalday {
+    background: url(../../img/week_off.gif) no-repeat;
+    color: #303030;
+    display: block;
+    height: 39px;
+    margin: 0 auto;
+    padding-top: 2px;
+    width: 53px;
+}
+
+.calendar_normalday:hover {
+    background: url(../../img/week_mo.gif) no-repeat;
+    text-decoration: none;
+}
+
+.calendar_right {
+    background: url(../../img/week_next_off.gif) no-repeat;
+    display: block;
+    height: 39px;
+    width: 16px;
+}
+
+.calendar_right:hover {
+    background: url(../../img/week_next_mo.gif) no-repeat;
+}
+
+/* ************************************************************
+ 移動ボタン
+************************************************************ */
+.castbtn_left,.castbtn_right {
+    display: block;
+    width: 22px;
+    height: 17px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* ************************************************************
+ 移動ボタン 《 》
+************************************************************ */
+.castbtn_left {
+	float:left;
+    background: url(../../img/castbtn_left_bg.gif) no-repeat;
+}
+
+.castbtn_left:hover {
+	float:left;
+    background: url(../../img/castbtn_left_bg_ov.gif) no-repeat;
+    text-decoration: none;
+}
+
+.castbtn_right {
+	float:right;
+    background: url(../../img/castbtn_right_bg.gif) no-repeat;
+}
+
+.castbtn_right:hover {
+	float:right;
+    background: url(../../img/castbtn_right_bg_ov.gif) no-repeat;
+    text-decoration: none;
+}
+
+/* ************************************************************
+ 検索条件
+************************************************************ */
+.result_close,.result_open {
+    display: block;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.result_close .inner1,.result_close .inner2,.result_open .inner1,.result_open .inner2 {
+    display: block;
+    height: 25px;
+}
+
+/* ************************************************************
+ 検索条件を閉じる
+************************************************************ */
+.result_close {
+    background: url(../../img/result_close_long.gif) no-repeat center 0;
+}
+
+.result_close .inner1 {
+    background: url(../../img/result_close_l.gif) no-repeat left 0;
+}
+
+.result_close .inner2 {
+    background: url(../../img/result_close_r.gif) no-repeat right 0;
+}
+
+.result_close:hover {
+    background: url(../../img/result_close_ov_long.gif) no-repeat center 0;
+}
+
+.result_close:hover .inner1 {
+    background: url(../../img/result_close_l_ov.gif) no-repeat left 0;
+}
+
+.result_close:hover .inner2 {
+    background: url(../../img/result_close_r_ov.gif) no-repeat right 0;
+}
+
+/* ************************************************************
+ 検索条件を見る
+************************************************************ */
+.result_open {
+    background: url(../../img/result_open_long.gif) no-repeat center 0;
+}
+
+.result_open .inner1 {
+    background: url(../../img/result_open_l.gif) no-repeat left 0;
+}
+
+.result_open .inner2 {
+    background: url(../../img/result_open_r.gif) no-repeat right 0;
+}
+
+.result_open:hover {
+    background: url(../../img/result_open_ov_long.gif) no-repeat center 0;
+}
+
+.result_open:hover .inner1 {
+    background: url(../../img/result_open_l_ov.gif) no-repeat left 0;
+}
+
+.result_open:hover .inner2 {
+    background: url(../../img/result_open_r_ov.gif) no-repeat right 0;
+}
+
+/* ************************************************************
+ 時間割枠登録ボタン
+************************************************************ */
+.timetable_entry,.timetable_entry_on {
+    display: block;
+    float: left;
+    font-size: 15px;
+    font-weight: 700;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 10px;
+    text-align: center;
+    width: 78px;
+}
+
+.timetable_entry {
+    background: url(../../img/timetable_entry_bg.gif) no-repeat;
+    text-decoration: none;
+}
+
+.timetable_entry:hover {
+    background: url(../../img/timetable_entry_bg_ov.gif) no-repeat;
+    text-decoration: none;
+}
+
+.timetable_entry_on {
+    background: url(../../img/timetable_entry_bg_ov.gif) no-repeat;
+}
+
+/* ************************************************************
+ 外字ボタン
+************************************************************ */
+.gaiji_subbtn {
+    background: url(../../img/gaiji_subbtn_bg.gif) no-repeat;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    width: 94px;
+    height: 30px;
+    _position: absolute;
+    _top: expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight-50) + 'px' ); /* 高さ100pxの場合 */
+}
+
+.gaiji_subbtn:hover {
+    background: url(../../img/gaiji_subbtn_bg_ov.gif) no-repeat;
+}
+
+/* ************************************************************
+ 印刷条件設定画面　OPEN/CLOSE
+************************************************************ */
+.result_print_close {
+    display: block;
+    height: 25px;
+    margin-bottom: 10px;
+    background: url(../../img/result_print_close_long.gif) center 0 no-repeat;
+}
+
+.result_print_close .inner1 {
+    display: block;
+    height: 25px;
+    background: url(../../img/result_close_l.gif) left 0 no-repeat;
+}
+
+.result_print_close .inner2 {
+    display: block;
+    height: 25px;
+    background: url(../../img/result_close_r.gif) right 0 no-repeat;
+}
+
+.result_print_close:hover {
+    background: url(../../img/result_print_close_ov_long.gif) center 0 no-repeat;
+}
+
+.result_print_close:hover .inner1 {
+    background: url(../../img/result_close_l_ov.gif) left 0 no-repeat;
+}
+
+.result_print_close:hover .inner2 {
+    background: url(../../img/result_close_r_ov.gif) right 0 no-repeat;
+}
+
+.result_print_open {
+    display: block;
+    height: 25px;
+    margin-bottom: 10px;
+    background: url(../../img/result_print_open_long.gif) center 0 no-repeat;
+}
+
+.result_print_open .inner1 {
+    display: block;
+    height: 25px;
+    background: url(../../img/result_open_l.gif) left 0 no-repeat;
+}
+
+.result_print_open .inner2 {
+    display: block;
+    height: 25px;
+    background: url(../../img/result_open_r.gif) right 0 no-repeat;
+}
+
+.result_print_open:hover {
+    background: url(../../img/result_print_open_ov_long.gif) center 0 no-repeat;
+}
+
+.result_print_open:hover .inner1 {
+    background: url(../../img/result_open_l_ov.gif) left 0 no-repeat;
+}
+
+.result_print_open:hover .inner2 {
+    background: url(../../img/result_open_r_ov.gif) right 0 no-repeat;
+}
+
+.menu_page_link {
+    display: none;
+}
+
+/* 登录ボタン */
+.login_subbtn {
+	display: block;
+	width: 82px;
+	height: 20px;
+	margin: 3px 3px 0px 3px ;
+	background: url(../../img/login_btn_bg.gif) 0 0 no-repeat;
+}
+.login_subbtn:hover {
+	background: url(../../img/login_btn_bg_ov.gif) 0 0 no-repeat;
+}      
+
+/* ログアウトボタン */
+.head_logout_subbtn {
+	display: block;
+	width: 77px;
+	height: 19px;
+	margin: 3px 3px 0px 3px ;
+	background: url(../../img/logout_head.gif) 0 0 no-repeat;
+}
+.head_logout_subbtn:hover {
+	background: url(../../img/logout_head_mo.gif) 0 0 no-repeat;
+}
+
+/* 「取戻」 */
+.torimodoshi_mainbtn {
+    background: url(../../img/torimodoshi_mainbtn_bg.gif) no-repeat;
+}
+
+.torimodoshi_mainbtn:hover {
+    background: url(../../img/torimodoshi_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「取止」 */
+.toriyame_mainbtn {
+    background: url(../../img/toriyame_mainbtn_bg.gif) no-repeat;
+}
+
+.toriyame_mainbtn:hover {
+    background: url(../../img/toriyame_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「一時保管」 */
+.ichijihokan_mainbtn {
+    background: url(../../img/ichijihokan_mainbtn_bg.gif) no-repeat;
+}
+
+.ichijihokan_mainbtn:hover {
+    background: url(../../img/ichijihokan_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「否決」 */
+.hiketsu_mainbtn {
+    background: url(../../img/hiketsu_mainbtn_bg.gif) no-repeat;
+}
+
+.hiketsu_mainbtn:hover {
+    background: url(../../img/hiketsu_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「差戻」 */
+.sashimodoshi_mainbtn {
+    background: url(../../img/sashimodoshi_mainbtn_bg.gif) no-repeat;
+}
+
+.sashimodoshi_mainbtn:hover {
+    background: url(../../img/sashimodoshi_mainbtn_bg_ov.gif) no-repeat;
+}
+
+/* 「承認」 */
+.shounin_mainbtn {
+    background: url(../../img/shounin_mainbtn_bg.gif) no-repeat;
+}
+
+.shounin_mainbtn:hover {
+    background: url(../../img/shounin_mainbtn_bg_ov.gif) no-repeat;
+}

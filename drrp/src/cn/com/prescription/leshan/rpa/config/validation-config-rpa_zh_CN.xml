@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+        
+<form-validation>
+    <formset>
+        <!-- rpa00101 处方添加画面 -->
+        <form name="rpa00101Action#doEntry">
+            <field property="patientName" depends="required">
+                <arg key="患者姓名" resource="false" />
+            </field>
+            <field property="ceelNumber" depends="required">
+                <arg key="手机号码" resource="false" />
+            </field>
+            <field property="price" depends="required">
+                <arg key="价格" resource="false" />
+            </field>
+        </form>
+        <!-- rpa00103 处方编辑画面 -->
+        <form name="rpa00103Action#doUpdate">
+            <field property="price" depends="required">
+                <arg key="价格" resource="false" />
+            </field>
+        </form>
+        <!-- rpa00201 患者信息添加画面 -->
+        <form name="rpa00201Action#doEntry">
+            <field property="userName" depends="required">
+                <arg key="姓名" resource="false" />
+            </field>
+            <field property="ceelNumber" depends="required">
+                <arg key="手机号码" resource="false" />
+            </field>
+        </form>
+        <!-- rpa00203 患者信息编辑画面 -->
+        <form name="rpa00203Action#doUpdate">
+            <field property="userName" depends="required">
+                <arg key="姓名" resource="false" />
+            </field>
+            <field property="ceelNumber" depends="required">
+                <arg key="手机号码" resource="false" />
+            </field>
+        </form>
+        <!-- rpa00301 药品添加画面 -->
+        <form name="rpa00301Action#doEntry">
+            <field property="drugName" depends="required">
+                <arg key="药品名称" resource="false" />
+            </field>
+            <field property="manufacturerName" depends="required">
+                <arg key="厂商名称" resource="false" />
+            </field>
+            <field property="price" depends="required">
+                <arg key="价格" resource="false" />
+            </field>
+            <field property="unit" depends="required">
+                <arg key="规格" resource="false" />
+            </field>
+        </form>
+        <!-- rpa00303 药品编辑画面 -->
+        <form name="rpa00303Action#doUpdate">
+            <field property="drugName" depends="required">
+                <arg key="药品名称" resource="false" />
+            </field>
+            <field property="manufacturerName" depends="required">
+                <arg key="厂商名称" resource="false" />
+            </field>
+            <field property="price" depends="required">
+                <arg key="价格" resource="false" />
+            </field>
+            <field property="unit" depends="required">
+                <arg key="规格" resource="false" />
+            </field>
+        </form>
+    </formset>
+</form-validation>

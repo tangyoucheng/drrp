@@ -1,0 +1,971 @@
+@charset "UTF-8";
+
+/* ************************************************************
+【文脈】HTML内の文脈に対するスタイルを指定
+************************************************************ */
+#dialogue .row_table td {
+    text-align: left;
+}
+
+#dialogue_s .entryout_label {
+    margin: 5px 10px;
+    text-align: left;
+}
+
+#dialogue_s .message_spot {
+    background: url(../../img/border_repe_bg_assist.png);
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 50px 0 30px;
+    text-align: center;
+}
+
+#dialogue_s h2.normal_title {
+    background: #B4E6ED;
+    border-bottom: solid 1px #90D3D4;
+    font-weight: 700;
+    padding: 5px 10px 5px 25px;
+}
+
+#dialogue_s table {
+    margin: 5px auto;
+}
+
+#dialogue_s table tr td {
+    vertical-align: bottom;
+}
+
+#dialogue_s td.mini {
+    text-align: center;
+    width: 80px;
+}
+
+#login_body .login_area {
+    margin-top: 130px;
+    text-align: center;
+}
+
+/*IE 7 hack*/
+* html .confirm_content_table {
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+    margin: 10px auto 0;
+    width: 100%;
+}
+
+* html .content_tabheader_f_left span {
+    display: block;
+    padding-bottom: 3px;
+    padding-top: 8px;
+}
+
+* html .content_tabheader_f_right span {
+    display: block;
+    padding-bottom: 3px;
+    padding-top: 8px;
+}
+
+* html .entry_content_table {
+    width: 100%;
+}
+
+* html .search_content_table {
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+* html .wrap_table .confirm_content_table {
+    width: 100%;
+}
+
+* html .wrap_table .entry_content_table {
+    width: 100%;
+}
+
+* html .wrap_table_half .confirm_content_table {
+    width: 100%;
+}
+
+* html .wrap_table_half .entry_content_table {
+    width: 100%;
+}
+/*IE 7 hack*/
+.aidbtn_storage form {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    width: auto;
+}
+
+.aidbtn_storage input {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    width: auto;
+}
+
+.confirm_content_table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.confirm_content_table .entry_name {
+    background-color: #fff;
+    padding: 2px 3px;
+    text-align: right;
+    vertical-align: top;
+    width: 30%;
+}
+
+.confirm_content_table td {
+    background-color: #dadada;
+    border: solid 1px #fff;
+    padding: 2px 3px;
+    text-align: left;
+}
+
+.content_tabheader_tabbox ul {
+    margin-bottom: 1px;
+    overflow: hidden;
+    padding-left: 10px;
+    zoom: 1;
+}
+
+.content_tabheader_tabbox ul li {
+    display: block;
+    float: left;
+    height: 50px;
+    margin-right: 2px;
+    text-align: center;
+    width: 120px;
+}
+
+.content_tabheader_tabbox ul li .inner {
+    display: block;
+    margin: 16px 0 3px;
+}
+
+.content_tabheader_tabbox ul li .record_tab {
+    background: url(../../img/record_tab.gif) no-repeat 0 bottom;
+    color: #000;
+    display: block;
+    height: 50px;
+    padding-top: 1px;
+}
+
+.content_tabheader_tabbox ul li .record_tab:hover {
+    background: url(../../img/record_tab_ov.gif) no-repeat 0 bottom;
+    text-decoration: none;
+}
+
+.content_tabheader_tabbox ul li .record_tab_edit {
+    background: url(../../img/record_tab_edit_on.gif) no-repeat 0 bottom;
+    display: block;
+    height: 50px;
+    padding-top: 1px;
+}
+
+.content_tabheader_tabbox ul li .record_tab_edit_off {
+    background: url(../../img/record_tab.gif) no-repeat 0 bottom;
+    color: #8b8b8b;
+    display: block;
+    height: 50px;
+    padding-top: 1px;
+}
+
+.content_tabheader_tabbox ul li .record_tab_on {
+    background: url(../../img/record_tab_on.gif) no-repeat 0 bottom;
+    display: block;
+    height: 50px;
+    padding-top: 1px;
+}
+
+.content_tabheader_tabbox ul li span.oneline {
+    padding-top: 8px;
+}
+
+.content_tabheader_tabbox ul li span.record_tab_edit span.inner {
+    display: block;
+    margin: 19px 0 3px;
+}
+
+.contenthead_navi_area .icon_info {
+    float: right;
+    margin-left: 3px;
+    margin-top: 10px;
+    text-align: right;
+    width: 400px;
+}
+
+.entryout_label form {
+    display: inline;
+    vertical-align: bottom;
+}
+
+.entryout_label img {
+    vertical-align: middle;
+}
+
+.entryout_label label {
+    display: inline;
+    vertical-align: bottom;
+}
+
+.error_spot span.error_massege {
+    color: #F55D3B;
+    display: block;
+    padding: 5px 30px;
+    text-align: left;
+}
+
+.error_spot span.error_title {
+    background: #F55D3B;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    padding: 4px 5px 4px 10px;
+    text-align: center;
+}
+/* 20120203 修正  start */
+.guide_btn_table td {
+/*     padding: 10px; */
+	padding-top:2px;
+    text-align: center;
+}
+/* 20120203 修正  end */
+
+.guide_btn_table td.align_left a {
+    float: left;
+}
+
+.guide_btn_table td.align_right a {
+    float: right;
+}
+
+.import_result .cube {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 75px;
+}
+
+.import_result img {
+    display: block;
+    float: left;
+}
+
+.info_content img {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.login_table td {
+    text-align: left;
+}
+
+.login_table td input {
+    margin: 2px 0 2px 5px;
+}
+
+.login_table td.align_right {
+    text-align: right;
+}
+
+.noscroll_table .bg_g {
+    background: #dedede;
+}
+
+.noscroll_table .list_table tr td.left {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.noscroll_table .navi_btn_cell {
+    padding: 3px;
+    text-align: center;
+    width: 82px;
+}
+
+.noscroll_table .one_tile {
+    padding: 3px 0;
+    width: 90px;
+}
+
+.noscroll_table td {
+    background: #fff;
+    font-weight: 400;
+    padding-left: 1px;
+    text-align: center;
+}
+
+.noscroll_table td img {
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+.noscroll_table th {
+    border: solid 1px #fff;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+.noscroll_table tr .week_date {
+    padding: 3px;
+    text-align: center;
+    width: 28px;
+}
+
+.row_confirm_table td {
+    background-color: #fff;
+    cursor: hand;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+.row_confirm_table th {
+    background-color: #B8B8B8;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+.row_confirm_table th.head_end {
+    border: solid 1px #fff;
+}
+
+.row_confirm_table th.td_head {
+    border: solid 1px #fff;
+}
+
+.row_table td {
+/*     background-color: #fff; */
+    padding: 2px 3px 2px 5px;
+    text-align: left;
+    height:24px;
+}
+
+.row_table td div.txt_overflow {
+	height:22px;
+    line-height:20px;
+    overflow:hidden;
+    /* lzq SI1_00448 Start*/
+    word-break:break-all;
+    /* lzq SI1_00448 End*/
+}
+
+.row_table tr {
+    background-color: #fff;
+/*     padding: 2px 3px 2px 5px; */
+/*     text-align: left; */
+}
+
+.row_table th {
+    background-color: #B8B8B8;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 3px 0 3px 6px;
+    text-align: center;
+}
+
+.row_table th.head_end {
+    border: solid 1px #fff;
+}
+
+.row_table th.td_head {
+    border: solid 1px #fff;
+}
+
+.scroll_div .scroll_div_intable {
+    background: #B8B8B8;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 0 auto 2px;
+    table-layout: fixed;
+    width: 710px;
+}
+
+.scroll_div .scroll_div_intable .bg_g {
+    background: #dedede;
+}
+
+.scroll_div .scroll_div_intable .left {
+    text-align: left;
+}
+
+.scroll_div .scroll_div_intable .list {
+    margin: 0 5px 0 0;
+}
+
+.scroll_div .scroll_div_intable .list_table {
+    width: 100%;
+}
+
+.scroll_div .scroll_div_intable .list_table tr td.left {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.scroll_div .scroll_div_intable .navi_btn_cell {
+    padding: 3px;
+    text-align: center;
+    width: 82px;
+}
+
+.scroll_div .scroll_div_intable .week_date {
+    padding: 3px;
+    text-align: center;
+    width: 28px;
+}
+
+.scroll_div .scroll_div_intable td {
+    background: #fff;
+    font-weight: 400;
+    padding: 3px 5px;
+    text-align: center;
+}
+
+.scroll_div .scroll_div_intable td img {
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+.scroll_div .scroll_div_intable th {
+    border: solid 1px #fff;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+.search_content_table .entry_name {
+    background-color: #fff;
+    padding: 2px 3px;
+    text-align: right;
+    vertical-align: top;
+    width: 70px;
+}
+
+.search_content_table td {
+    background: #efefef;
+    padding: 2px 3px;
+    text-align: left;
+}
+
+.search_content_table td.in_table {
+    background: #fff;
+    padding: 0;
+}
+
+.search_content_table td.in_table .into_cell {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.search_content_table td.in_table .into_cell td {
+    background: #fff;
+    padding: 2px 3px;
+}
+
+.search_content_table td.in_table .into_cell td.padding_cell {
+    width: 1px;
+}
+
+.search_content_table td.in_table .into_cell td.td_g {
+    background: #dadada;
+}
+
+.student_img_ref .noimage {
+    background: #ccc;
+    display: block;
+    height: 120px;
+    margin-bottom: 3px;
+}
+
+.wrap_table .confirm_content_table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+}
+
+.wrap_table .entry_content_table {
+    width: 100%;
+}
+
+.wrap_table .entry_content_table td {
+    border-style: none;
+    padding: 2px 3px;
+    text-align: left;
+}
+
+.wrap_table .entry_content_table td.multi_input input.top {
+    margin-bottom: 3px;
+}
+
+.wrap_table .entry_content_table td.multi_input textarea.top {
+    margin-bottom: 3px;
+}
+
+.wrap_table tr td table.confirm_content_table tr td {
+    background-color: #dadada;
+    border: solid 1px #fff;
+    border-style: none;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.wrap_table tr td table.confirm_content_table tr td.change_entry {
+    background-color: #A9CFD4;
+}
+
+.wrap_table tr td table.confirm_content_table tr td.entry_name {
+    background-color: #fff;
+    text-align: right;
+    vertical-align: baseline;
+}
+
+.wrap_table_half .confirm_content_table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+}
+
+.wrap_table_half .entry_content_table {
+    width: 100%;
+}
+
+.wrap_table_half .entry_content_table td {
+    border-style: none;
+    padding: 2px 3px;
+    text-align: left;
+}
+
+.wrap_table_half .entry_content_table td.multi_input input.top {
+    margin-bottom: 3px;
+}
+
+.wrap_table_half .entry_content_table td.multi_input textarea.top {
+    margin-bottom: 3px;
+}
+
+.wrap_table_half tr td table.confirm_content_table tr td {
+    background-color: #dadada;
+    border: solid 1px #fff;
+    border-style: none;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.wrap_table_half tr td table.confirm_content_table tr td.change_entry {
+    background-color: #A9CFD4;
+}
+
+.wrap_table_half tr td table.confirm_content_table tr td.entry_name {
+    background-color: #fff;
+    text-align: right;
+    vertical-align: baseline;
+}
+
+a.hour_tile_1 span.hour_head {
+    display: block;
+    height: 32px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+a.hour_tile_1 span.hour_text {
+    display: block;
+    line-height: 16px;
+    margin-top: 3px;
+    text-align: left;
+}
+
+a.hour_tile_1 span.hour_wrap {
+    display: block;
+    padding: 7px 13px 5px 12px;
+}
+
+a.hour_tile_2 span.hour_head {
+    display: block;
+    height: 32px;
+    margin-bottom: 4px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+a.hour_tile_2 span.hour_text {
+    display: block;
+    line-height: 16px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+a.hour_tile_2 span.hour_wrap {
+    display: block;
+    padding: 7px 13px 5px 12px;
+}
+
+a.hour_tile_3 span.hour_head {
+    display: block;
+    height: 32px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+a.hour_tile_3 span.hour_text {
+    display: block;
+    line-height: 16px;
+    margin-top: 3px;
+    text-align: left;
+}
+
+a.hour_tile_3 span.hour_wrap {
+    display: block;
+    padding: 7px 13px 5px 12px;
+}
+
+a.hour_tile_slim_1 span {
+    display: block;
+    line-height: 30px;
+}
+
+a.hour_tile_slim_2 span {
+    display: block;
+    line-height: 30px;
+}
+
+a.hour_tile_slim_3 span {
+    display: block;
+    line-height: 30px;
+}
+
+a.hour_tile_slim_4 span {
+    display: block;
+    line-height: 30px;
+}
+
+a.schoolwide_tile_1 span {
+    display: block;
+    line-height: 16px;
+    margin: 18px 15px 12px 10px;
+    text-align: center;
+}
+
+a.schoolwide_tile_2 span {
+    display: block;
+    line-height: 16px;
+    margin: 18px 15px 12px 10px;
+    text-align: center;
+}
+
+a.schoolwide_tile_3 span {
+    display: block;
+    line-height: 16px;
+    margin: 18px 15px 12px 10px;
+    text-align: center;
+}
+/* 20120203 修正  start */
+h2.normal_title_inbtn span.title_area {
+    display: block;
+    float: left;
+/*     font-weight: 400; */
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 30px;
+    width: 500px;
+    font-size: 
+}
+
+h2.normal_title span.title_area {
+    display: block;
+    float: left;
+/*     font-weight: 400; */
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 30px;
+    width: 500px;
+    font-size: 
+}
+/* 20120203 修正  end */
+
+ol.topic_path li {
+    float: left;
+    margin-right: 8px;
+}
+
+table.wrap_table td {
+    background: #fff;
+    font-weight: 400;
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table.wrap_table td .entry_content_table td {
+    padding: 2px;
+}
+
+table.wrap_table td.class_cell {
+    background: #cee2f5;
+    border: solid 1px #fff;
+    text-align: right;
+    vertical-align: middle;
+}
+
+table.wrap_table th {
+    background: #cee2f5;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+table.wrap_table th span.copybtn_storage {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 170px;
+}
+
+table.wrap_table_half td {
+    background: #fff;
+    font-weight: 400;
+    padding: 10px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table.wrap_table_half td .entry_content_table td {
+    padding: 2px;
+}
+
+table.wrap_table_half td.class_cell {
+    background: #cee2f5;
+    border: solid 1px #fff;
+    text-align: right;
+    vertical-align: middle;
+}
+
+table.wrap_table_half th {
+    background: #cee2f5;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 3px;
+    text-align: center;
+}
+
+table.wrap_table_half th span.copybtn_storage {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 170px;
+}
+
+ul.footer_menu li {
+    float: left;
+    font-size: 11px;
+}
+
+ul.footer_menu li a {
+    margin: 0 5px;
+}
+
+/** MOVE */
+td.click,th.click,td.hovercell,th.hovercell {
+    background-color: #B3E3FF;
+}
+
+td.hover,tr.hover {
+    background-color: #D1F1FF;/** 20120203 修正 */
+}
+
+tr.even {
+    background-color: #D1F1FF;/** 20120203 追加 */
+}
+
+tr.odd {
+    background-color: #fff;/** 20120203 追加 */
+}
+
+td.selected {
+    background-color: #316AC5;/** 20120203 追加 */
+}
+
+td.hovercell,th.hovercell,td.hover,tr.hover {
+    cursor: pointer;
+}
+
+/* 一覧ヘッダ行の項目名に昇順／降順ボタン用 */
+.headerBtnSortBtn  {
+	display: block;
+	float: right;
+    height: 18px;
+    width: 15px;
+	cursor: pointer;
+	background: url(../../img/sort_bg.gif) no-repeat;
+}
+.headerSortBtn_up  {
+	display: block;
+	float: right;
+    height: 18px;
+    width: 15px;
+	cursor: pointer;
+	background: url(../../img/sort_asc.gif) no-repeat;
+}
+.headerSortBtn_down  {
+	display: block;
+	float: right;
+    height: 18px;
+    width: 15px;
+	cursor: pointer;
+	background: url(../../img/sort_desc.gif) no-repeat;
+}
+
+a:active {
+	outline: none;
+/* 	star:expression(this.onFocus=this.blur()); */
+}
+
+
+/*20120802 追加 Start */
+.scroll_table td {
+/*     background-color: #fff; */
+    padding: 2px 3px 2px 5px;
+    text-align: left;
+    height:24px;
+}
+/*20121122 追加 START */
+.scroll_table td div.txt_overflow {
+	height:22px;
+    line-height:20px;
+    overflow:hidden;
+    /* lzq SI1_00448 Start*/
+    word-break:break-all;
+    /* lzq SI1_00448 End*/
+}
+/*20121122 追加 END */
+.scroll_table tr {
+    background-color: #fff;
+/*     padding: 2px 3px 2px 5px; */
+/*     text-align: left; */
+}
+.scroll_table tr.even {
+    background-color: #D1F1FF;
+}
+
+.scroll_table tr.odd {
+    background-color: #fff;
+}
+
+
+.scroll_table_title th {
+    background-color: #B8B8B8;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 3px 0 3px 6px;
+    text-align: center;
+}
+
+.scroll_table_title th.head_end {
+    border: solid 1px #fff;
+}
+
+.scroll_table_title th.td_head {
+    border: solid 1px #fff;
+}
+/*20120802 追加 end */
+/*20121130 追加 START*/
+.dialogue_row_table td {
+    padding: 2px 3px 2px 5px;
+    text-align: left;
+
+}
+
+.dialogue_row_table td div.txt_overflow {
+    height:18px;
+    line-height:20px;
+    overflow:hidden;
+    /* lzq SI1_00448 Start*/
+    word-break:break-all;
+    /* lzq SI1_00448 End*/
+}
+
+.dialogue_row_table tr {
+    background-color: #fff;
+}
+
+.dialogue_row_table th {
+    background-color: #B8B8B8;
+    border: solid 1px #fff;
+    color: #443d5b;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 3px 0 3px 6px;
+    text-align: center;
+}
+
+/*20121130 追加 END */
+
+.entry_content_table td {
+    padding: 2px 3px;
+    text-align: left;
+    vertical-align:top;
+}
+
+.entry_content_table td.multi_input form.top {
+    margin-bottom: 3px;
+}
+
+.entry_content_table td.multi_input input.top {
+    margin-bottom: 3px;
+}
+
+.entry_content_table th {
+    background-color: #B8B8B8;
+    color: #443d5b;
+    font-size: .8em;
+    padding: 3px 0 3px 6px;
+    text-align: center;
+}
+
+.entry_content_table td.multi_input {
+    padding: 0px;
+}
+.entry_content_table img.searchImg {
+    cursor: pointer;
+    height: 21px;
+}
+.entry_content_table .entry_name {
+    padding: 5px 3px 0;
+    text-align: right;
+    width: 105px;
+}
+.entry_content_table .entry_name label {
+    vertical-align: top;
+}
+
+.txt_overflow {
+    overflow:hidden;
+    word-break:break-all;
+    white-space:nowrap;
+    word-wrap:normal !important;
+    text-overflow:ellipsis;
+}

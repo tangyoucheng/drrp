@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="rpm" extends="basePackage" strict-method-invocation="false">
+        <!-- 登录 -->
+        <action name="loginAction_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00101Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00101.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00101.jsp</result>
+            <result name="login">/pages/jsp/rpm/rpm00101.jsp</result>
+            <result name="SCZ9901" type="chain">
+                <param name="actionName">scz9901Action</param>
+                <param name="method">doInit</param>
+            </result>
+        </action>
+        <!-- 添加用户 -->
+        <action name="rpm00201Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00201Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00201.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00201.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00201.jsp</result>
+        </action>
+        <!-- 用户一览-->
+        <action name="rpm00202Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00202Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00202.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00202.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00202.jsp</result>
+        </action>
+        <!-- 用户编辑-->
+        <action name="rpm00203Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00203Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00203.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00203.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00203.jsp</result>
+        </action>
+        
+        <!-- 角色添加-->
+        <action name="rpm00301Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00301Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00301.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00301.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00301.jsp</result>
+        </action>
+        <!-- 角色一览-->
+        <action name="rpm00302Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00302Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00302.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00302.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00302.jsp</result>
+        </action>
+        <!-- 角色编辑-->
+        <action name="rpm00303Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00303Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00303.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00303.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00303.jsp</result>
+        </action>
+        
+        <!-- 菜单权限-->
+        <action name="rpm00401Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00401Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00401.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00401.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00401.jsp</result>
+        </action>
+        
+        <!-- 推广信息-->
+        <action name="rpm00501Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00501Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00501.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00501.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00501.jsp</result>
+        </action>
+        <!-- 推广信息一览-->
+        <action name="rpm00502Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00502Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00502.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00502.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00502.jsp</result>
+        </action>
+        <!-- 推广信息编辑-->
+        <action name="rpm00503Action_*"
+            class="cn.com.prescription.leshan.rpm.action.RPM00503Action" method="{1}">
+            <result name="input">/pages/jsp/rpm/rpm00503.jsp</result>
+            <result name="error">/pages/jsp/rpm/rpm00503.jsp</result>
+            <result name="success">/pages/jsp/rpm/rpm00503.jsp</result>
+        </action>
+        
+    </package>
+</struts>

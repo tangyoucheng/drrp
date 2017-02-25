@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+        
+<form-validation>
+    <formset>
+        <!-- rpm00101 登录画面 -->
+        <form name="loginAction#doLogin">
+            <field property="userId" depends="required,hankaku">
+                <arg key="用户Ｄ" resource="false" />
+            </field>
+            <field property="password" depends="required,hankaku">
+                <arg key="用户密码" resource="false" />
+            </field>
+        </form>
+        <!-- rpm00201 系统用户添加画面 -->
+        <form name="rpm00201Action#doEntry">
+            <field property="userId" depends="required,hankaku">
+                <arg key="用户IＤ" resource="false" />
+            </field>
+            <field property="password" depends="required,hankaku">
+                <arg key="密码" resource="false" />
+            </field>
+            <field property="userName" depends="required">
+                <arg key="姓名" resource="false" />
+            </field>
+        </form>
+        <!-- rpm00203 系统用户编辑画面 -->
+        <form name="rpm00203Action#doUpdate">
+            <field property="userId" depends="required,hankaku">
+                <arg key="用户IＤ" resource="false" />
+            </field>
+            <field property="password" depends="required,hankaku">
+                <arg key="密码" resource="false" />
+            </field>
+            <field property="userName" depends="required">
+                <arg key="姓名" resource="false" />
+            </field>
+        </form>
+        <!-- rpm00301 角色添加画面 -->
+        <form name="rpm00301Action#doEntry">
+            <field property="roleId" depends="required,hankaku">
+                <arg key="角色IＤ" resource="false" />
+            </field>
+            <field property="roleName" depends="required">
+                <arg key="角色名" resource="false" />
+            </field>
+        </form>
+        <!-- rpm00303 角色编辑画面 -->
+        <form name="rpm00303Action#doUpdate">
+            <field property="roleId" depends="required,hankaku">
+                <arg key="角色IＤ" resource="false" />
+            </field>
+            <field property="roleName" depends="required">
+                <arg key="角色名" resource="false" />
+            </field>
+        </form>
+        <!-- rpm00501 角色编辑画面 -->
+        <form name="rpm00501Action#doEntry">
+            <field property="adId" depends="required">
+                <arg key="推广信息ID" resource="false" />
+            </field>
+            <field property="adName" depends="required">
+                <arg key="推广信息名" resource="false" />
+            </field>
+            <field property="adUrl" depends="required">
+                <arg key="推广信息URL" resource="false" />
+            </field>
+        </form>
+    </formset>
+</form-validation>

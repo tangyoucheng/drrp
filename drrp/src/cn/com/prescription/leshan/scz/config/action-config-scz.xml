@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="scz" extends="basePackage" strict-method-invocation="false">
+        <action name="scz9901Action_*" class="cn.com.prescription.leshan.scz.action.SCZ9901Action" method="{1}">
+            <result name="input" >/pages/jsp/scz/scz9901.jsp</result>
+            <result name="success" >/pages/jsp/scz/scz9901.jsp</result>
+            <result name="error" >/pages/jsp/scz/scz9901.jsp</result>
+        </action>
+        <!-- ヘーダ -->
+        <action name="scz990101Action_*" class="cn.com.prescription.leshan.scz.action.SCZ990101Action" method="{1}">
+            <result name="success">/pages/jsp/scz/scz990101.jsp</result>
+        </action>
+        <!-- メニュ -->
+        <action name="scz990102Action_*" class="cn.com.prescription.leshan.scz.action.SCZ990102Action" method="{1}">
+            <result name="success">/pages/jsp/scz/scz990102.jsp</result>
+        </action>
+        <!-- 画面ロック機能 -->
+        <action name="scz9902Action_*" class="cn.com.prescription.leshan.scz.action.SCZ9902Action" method="{1}">
+           <result name="input">/pages/jsp/scz/scz9902.jsp</result>
+           <result name="success">/pages/jsp/scz/scz9902.jsp</result>
+           <result name="error">/pages/jsp/scz/scz9902.jsp</result>
+        </action>
+    </package>
+</struts>
