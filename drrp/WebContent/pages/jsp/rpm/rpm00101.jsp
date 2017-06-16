@@ -40,7 +40,7 @@
             <tr>
                 <td style="text-align:right;">分店</td>
                 <td></td>
-                <td><s:select name="rpm00101Form.storeCode" list="rpm00101Form.storeCodeDataSource" listKey="recordCode" listValue="recordValue" cssStyle="width:195px;" cssErrorClass="error" /></td>
+                <td><s:select id="loginStoreCode" name="rpm00101Form.storeCode" list="rpm00101Form.storeCodeDataSource" listKey="recordCode" listValue="recordValue" cssStyle="width:195px;" cssErrorClass="error" /></td>
             </tr>
         </table>
         </div>

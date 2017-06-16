@@ -5,6 +5,7 @@ package cn.com.prescription.framework.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -299,9 +300,9 @@ public class ReflectUtils {
             Method method = cls.getMethod(getMethod, new Class[] {});
             method.invoke(object, new Object[] {}).getClass().getGenericSuperclass();
             Type type = method.getGenericReturnType();
-            if (type instanceof ParameterizedTypeImpl) {
+            if (type instanceof ParameterizedType) {
 
-                ParameterizedTypeImpl parameterizedTypeImpl = (ParameterizedTypeImpl) type;
+            	ParameterizedType parameterizedTypeImpl = (ParameterizedType) type;
                 Type[] types = parameterizedTypeImpl.getActualTypeArguments();
                 if (types != null && types.length != 0 && types[0].equals(CodeValueRecord.class)) {
                     return true;

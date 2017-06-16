@@ -4,9 +4,8 @@
 package cn.com.prescription.framework.common.security;
 
 import java.io.IOException;
+import java.util.Base64;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 /**
  * BASE64変換.
@@ -23,7 +22,7 @@ public class BASE64 {
      * @throws IOException IO異常
      */
     public static byte[] decryptBASE64(String value) throws IOException {
-        return (new BASE64Decoder()).decodeBuffer(value);
+        return Base64.getDecoder().decode(value);
     }
 
     /**
@@ -33,7 +32,7 @@ public class BASE64 {
      * @return 処理結果
      */
     public static String encryptBASE64(byte[] bytes) {
-        return (new BASE64Encoder()).encodeBuffer(bytes);
+        return Base64.getEncoder().encodeToString(bytes);
     }
 
 }

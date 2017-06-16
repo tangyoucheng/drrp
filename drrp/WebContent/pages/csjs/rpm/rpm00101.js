@@ -92,6 +92,10 @@ function setDefaultState(){
     } else {
         loginUser = document.rpm00101Form.loginUserId;
     }
+    var usercd = getCookie("rp_user_id");
+    if(loginUser && loginUser.value == "" && usercd != null){
+        loginUser.value = usercd;
+    }
 
     if(document.rpm00101Form.loginUserPwd.length > 1) {
         loginUserPassword = document.rpm00101Form.loginUserPwd[0];
@@ -99,9 +103,9 @@ function setDefaultState(){
         loginUserPassword = document.rpm00101Form.loginUserPwd;
     }
 
-    var usercd = getCookie("rp_user_id");
-    if(loginUser && loginUser.value == "" && usercd != null){
-        loginUser.value = usercd;
+    var storecd = getCookie("rp_store_code");
+    if(storecd != null && storecd.length > 0){
+        $("#loginStoreCode").val(storecd)
     }
 
     if(loginUser && loginUser.value == ""){
@@ -147,6 +151,19 @@ function login() {
                 bSecure = true;
             }
             setCookie("rp_user_id", loginUserCd, period,null,null,bSecure);
+        }
+        
+        // 把当前店铺编码保存到cookie中
+	    var loginStoreCode = $("#loginStoreCode").val();
+        if (loginStoreCode != null && loginStoreCode.length > 0){
+            var period = new Date()
+            period.setTime(period.getTime() + 604800000);
+            // HTTP protocol judgment!!
+            var bSecure = false;
+            if (window.location.protocol.indexOf( "https") != -1){
+                bSecure = true;
+            }
+            setCookie("rp_store_code", loginStoreCode, period,null,null,bSecure);
         }
         
 		return true;

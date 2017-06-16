@@ -9,11 +9,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
 
 import cn.com.prescription.framework.CodeValueRecord;
 import cn.com.prescription.framework.action.AbstractAction;
@@ -169,7 +169,7 @@ public class RPM00201Action extends AbstractAction {
                 identityImage.append("image/");
                 identityImage.append(fileType);
                 identityImage.append(";base64,");
-                identityImage.append(Base64.encode(bImage));
+                identityImage.append(Base64.getEncoder().encode(bImage));
                 dto.setThumbnailUrl(identityImage.toString());
 
                 List<CodeValueRecord> newIdentityImage = new ArrayList<CodeValueRecord>();
