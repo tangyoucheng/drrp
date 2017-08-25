@@ -1,5 +1,4 @@
 <!DOCTYPE html >
-
 <%--
 /*
  * Copyright(c) 2016 
@@ -43,7 +42,9 @@
                    <td>
                        <s:textfield id="manufacturerName"  name="rpa00302Form.manufacturerName" cssErrorClass="error" maxlength="50"></s:textfield>
                    </td>
-                   <td><g:submit method="doSearch" cssClass="aid_btn" value="" ><span>呼出</span></g:submit></td>
+                   <td>
+                   		<A class="aid_btn" id=rpa00304Action_doSearch_ onclick="return submitUrl(function() {doClearWaterMark();},$(this));" href="<%=request.getContextPath()%>/rpa00304Action!doSearch.do"><span>呼出</span></A>
+                   </td>
                </tr>
              </table>
 
@@ -83,20 +84,20 @@
                                         <s:hidden id="hidNotes_%{#listData.index}" name="rpa00304Form.subForm1[%{#listData.index}].notes"/>
                                     </td>
                                     <!-- 药品名称  -->
-                                    <td title="<s:property value="#rpa0030401Dto.drugName" /> " class="txt_overflow">
-                                            <s:property value="#rpa0030401Dto.drugName" /> 
+                                    <td title="<s:property value="drugName" /> " class="txt_overflow">
+                                            <s:property value="drugName" /> 
                                     </td>
                                     <!-- 厂商名称  -->
-                                    <td title="<s:property value="#rpa0030401Dto.manufacturerName" /> " class="txt_overflow">
-                                            <s:property value="#rpa0030401Dto.manufacturerName" /> 
+                                    <td title="<s:property value="manufacturerName" /> " class="txt_overflow">
+                                            <s:property value="manufacturerName" /> 
                                     </td>
                                     <!-- 价格/规格  -->
-                                    <td title="<s:property value="#rpa0030401Dto.price" />/<s:property value="#rpa0030401Dto.unit" /> " class="txt_overflow">
-                                            <s:property value="#rpa0030401Dto.price" />/<s:property value="#rpa0030401Dto.unit" /> 
+                                    <td title="<s:property value="price" />/<s:property value="unit" /> " class="txt_overflow">
+                                            <s:property value="price" />/<s:property value="unit" /> 
                                     </td>
                                     <!-- 备注  -->
-                                    <td title="<s:property value="#rpa0030401Dto.notes" /> " class="txt_overflow">
-                                            <s:property value="#rpa0030401Dto.notes" /> 
+                                    <td title="<s:property value="notes" /> " class="txt_overflow">
+                                            <s:property value="notes" /> 
                                     </td>
                                 </tr>
                             </s:iterator>
