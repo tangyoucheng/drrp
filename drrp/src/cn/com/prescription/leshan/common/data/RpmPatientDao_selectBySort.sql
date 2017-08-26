@@ -21,6 +21,14 @@ SELECT
     ceel_number,
     id_number,
     email,
+    place_of_birth, 
+    marital_status, 
+    lunar_birthday, 
+    nation, 
+    zodiac, 
+    company, 
+    profession, 
+    time_of_birth,
     delete_flag,
     create_user_id,
     create_date,
@@ -60,6 +68,32 @@ FROM
     /*IF condition.email != null && condition.email != "" */
         AND email = /*condition.email*/
     /*END*/
+        
+    /*IF condition.nation != null && condition.nation != "" */
+        AND email = /*condition.nation*/
+    /*END*/
+    /*IF condition.placeOfBirth != null && condition.placeOfBirth != "" */
+        AND email = /*condition.placeOfBirth*/
+    /*END*/
+    /*IF condition.maritalStatus != null && condition.maritalStatus != "" */
+        AND email = /*condition.maritalStatus*/
+    /*END*/
+    /*IF condition.lunarBirthday != null && condition.lunarBirthday != "" */
+        AND email = /*condition.lunarBirthday*/
+    /*END*/
+    /*IF condition.timeOfBirth != null && condition.timeOfBirth != "" */
+        AND email = /*condition.timeOfBirth*/
+    /*END*/
+    /*IF condition.zodiac != null && condition.zodiac != "" */
+        AND email = /*condition.zodiac*/
+    /*END*/
+    /*IF condition.company != null && condition.company != "" */
+        AND email = /*condition.company*/
+    /*END*/
+    /*IF condition.profession != null && condition.profession != "" */
+        AND email = /*condition.profession*/
+    /*END*/
+        
     /*IF condition.deleteFlag != null && condition.deleteFlag != "" */
         AND delete_flag = /*condition.deleteFlag*/
     /*END*/

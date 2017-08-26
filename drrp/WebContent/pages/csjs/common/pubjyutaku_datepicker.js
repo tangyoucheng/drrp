@@ -13,12 +13,26 @@ $(document).ready(function() {
         // --------------------------------------------------
         // 時刻
         // --------------------------------------------------
-        // initTimepicker('');
+        //initTimepicker('');
 
         // --------------------------------------------------
         // 日历
         // --------------------------------------------------
         initDatepicker('');
+
+    }
+
+    if ($(this).find("input[timepicker]").length > 0) {
+
+        // --------------------------------------------------
+        // 時刻
+        // --------------------------------------------------
+        initTimepicker('');
+
+        // --------------------------------------------------
+        // 日历
+        // --------------------------------------------------
+        //initDatepicker('');
 
     }
 });
@@ -36,12 +50,12 @@ function initTimepicker(_id) {
     if (_id != null && _id.length > 0) {
         datepicker = _id;
     }
-    $(window.top.right.document).find(datepicker).timepicker({
+    $(document).find(datepicker).timepicker({
         showOn : "both",
-        buttonText : "時刻",
+        buttonText : "时间",
         buttonImage : getContextPath("/pages/img/aidbtn_calender_bg.gif"),
         buttonImageOnly : true,
-        timeFormat : 'hh:mm',
+        timeFormat : 'hh时mm分',
         beforeShow : function() {
             beforePickTime(this);
         },
@@ -102,13 +116,10 @@ function initDatepicker(_id) {
 // ================================================
 function beforePickTime(hidden) {
     $p = $(hidden).parent();
-    $hour = $p.find("#" + $p.attr("group") + "_hour");
-    $minute = $p.find("#" + $p.attr("group") + "_minute");
-    $hiddenTime = $p.find("#" + $p.attr("group") + "_hidden");
+    $timeObject = $p.find("#" + $p.attr("group") + "_time");
+    $hiddenObject = $p.find("#" + $p.attr("group") + "_hidden");
 
-    $hiddenTime
-            .attr("value", $hour.attr("value") + ":" + $minute.attr("value"));
-
+    $hiddenObject.attr("value", $timeObject.attr("value"));
 };
 // ================================================
 // hidden tag of timePicker -> select tag of hh時mm刻
@@ -119,19 +130,26 @@ function beforePickTime(hidden) {
 // 【概要】
 // ================================================
 function onPickTime(hidden) {
-    var val = hidden.value.split(":");
-    var h = val[0];
-    var m = val[1];
-
+//    var val = hidden.value.split(":");
+//    var h = val[0];
+//    var m = val[1];
+//
     $p = $(hidden).parent();
-    $hour = $p.find("#" + $p.attr("group") + "_hour");
-    $minute = $p.find("#" + $p.attr("group") + "_minute");
-    $hiddenTime = $p.find("#" + $p.attr("group") + "_hidden");
+//    $hour = $p.find("#" + $p.attr("group") + "_hour");
+//    $minute = $p.find("#" + $p.attr("group") + "_minute");
+//    $hiddenTime = $p.find("#" + $p.attr("group") + "_hidden");
+//
+//    $hour.attr("value", h);
+//    $minute.attr("value", m);
+//
+//    $hiddenTime.attr("value", hidden.value);
+    
 
-    $hour.attr("value", h);
-    $minute.attr("value", m);
+    $timeObject = $p.find("#" + $p.attr("group") + "_time");
 
-    $hiddenTime.attr("value", hidden.value);
+    $timeObject.attr("value", hidden.value);
+
+    $hiddenObject.attr("value", hidden.value);
 
 };
 

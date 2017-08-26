@@ -77,6 +77,40 @@ public class RPA00205InitLogic extends StandardBiz implements StandardLogic {
         rpa0020501Dto.setItemId("addr");
         rpa0020501Dto.setItemName("住址");
         inForm_.getSubForm1().add(rpa0020501Dto);
+        
+
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("nation");
+        rpa0020501Dto.setItemName("民族");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("place_of_birth");
+        rpa0020501Dto.setItemName("出生地");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("marital_status");
+        rpa0020501Dto.setItemName("婚况");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("lunar_birthday");
+        rpa0020501Dto.setItemName("农历生日");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("time_of_birth");
+        rpa0020501Dto.setItemName("出生时间");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("zodiac");
+        rpa0020501Dto.setItemName("属相");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("company");
+        rpa0020501Dto.setItemName("单位");
+        inForm_.getSubForm1().add(rpa0020501Dto);
+        rpa0020501Dto = new RPA0020501Dto();
+        rpa0020501Dto.setItemId("profession");
+        rpa0020501Dto.setItemName("职业");
+        inForm_.getSubForm1().add(rpa0020501Dto);
 
         // 出力情報設定
         return this.getEventResult(inForm_);

@@ -29,177 +29,210 @@ import cn.com.prescription.leshan.rpa.action.form.RPA00201Form;
  * @author fsb
  */
 /*
- * 新規作成
- * DATE: 2012.11. NAME: fsb
+ * 新規作成 DATE: 2012.11. NAME: fsb
  */
 public class RPA00201EntryLogic extends StandardBiz implements StandardLogic {
 
-    /**
-     * 用户基本テーブル DAO
-     */
-    private RpmPatientDao rpmPatientDao = null;
+	/**
+	 * 用户基本テーブル DAO
+	 */
+	private RpmPatientDao rpmPatientDao = null;
 
-    /**
-     * 日付
-     */
-    private static final String DATE_MAX = "99991231";
+	/**
+	 * 日付
+	 */
+	private static final String DATE_MAX = "99991231";
 
-    /**
-     * 用户情報設定ロジック的构造。
-     */
-    public RPA00201EntryLogic() {
-        super();
-    }
+	/**
+	 * 用户情報設定ロジック的构造。
+	 */
+	public RPA00201EntryLogic() {
+		super();
+	}
 
-    /**
-     * 業務処理を行う。
-     * 
-     * @param _event event
-     * @return event処理結果
-     * @throws ApplicationException event処理里应用程序例外发生的情况
-     * @throws SystemException event処理里系统例外发生的情况
-     */
-    public StandardEventResult service(StandardEvent _event) throws ApplicationException, SystemException {
+	/**
+	 * 業務処理を行う。
+	 * 
+	 * @param _event
+	 *            event
+	 * @return event処理結果
+	 * @throws ApplicationException
+	 *             event処理里应用程序例外发生的情况
+	 * @throws SystemException
+	 *             event処理里系统例外发生的情况
+	 */
+	public StandardEventResult service(StandardEvent _event) throws ApplicationException, SystemException {
 
-        // event処理結果
-        RPA00201Form inForm_ = (RPA00201Form) _event.getForm();
+		// event処理結果
+		RPA00201Form inForm_ = (RPA00201Form) _event.getForm();
 
-        // 排他情報：用户プロ情報
-        RpmPatientModel patientModel_ = patientCheck(inForm_);
+		// 排他情報：用户プロ情報
+		RpmPatientModel patientModel_ = patientCheck(inForm_);
 
-        // 用户基本テーブルの登录
-        insertPatient(inForm_);
+		// 用户基本テーブルの登录
+		insertPatient(inForm_);
 
-        // 完了画面を表示する。
-        this.connectCompleteDialog(MessageUtils.getMessage("I00001", "登录"),
-            new ActionInfo(RPA00201Action.class, "doInit"));
-        // 出力情報設定
-        return this.getEventResult(inForm_);
+		// 完了画面を表示する。
+		this.connectCompleteDialog(MessageUtils.getMessage("I00001", "登录"),
+				new ActionInfo(RPA00201Action.class, "doInit"));
+		// 出力情報設定
+		return this.getEventResult(inForm_);
 
-    }
+	}
 
-    /**
-     * 用户プロファイルテーブルのデータを取得し、ロック（for update）を行う
-     * 
-     * @param _inForm SCHM00301Form
-     * @return PatientModel_
-     * @throws ApplicationException event処理里应用程序例外发生的情况
-     * @throws SystemException event処理里系统例外发生的情况
-     */
-    private RpmPatientModel patientCheck(RPA00201Form _inForm) throws ApplicationException, SystemException {
+	/**
+	 * 用户プロファイルテーブルのデータを取得し、ロック（for update）を行う
+	 * 
+	 * @param _inForm
+	 *            SCHM00301Form
+	 * @return PatientModel_
+	 * @throws ApplicationException
+	 *             event処理里应用程序例外发生的情况
+	 * @throws SystemException
+	 *             event処理里系统例外发生的情况
+	 */
+	private RpmPatientModel patientCheck(RPA00201Form _inForm) throws ApplicationException, SystemException {
 
-        // 排他情報：用户プロ情報
-        RpmPatientCondition patientCondition_ = new RpmPatientCondition();
-        // 用户名
-        patientCondition_.setUserName(_inForm.getUserName());
-        // 用户手机
-        patientCondition_.setCeelNumber(_inForm.getCeelNumber());
-        // 消除标识＝ [定数：消除标识．有効レコード]
-        patientCondition_.setDeleteFlag(LeshanConstantsIF.DEL_FLG_YUKO_RECORD);
-        // [排他情報：用户プロファイル情報]
-        RpmPatientModel patientModel_ = rpmPatientDao.selectForUpdate(patientCondition_);
-        // 「削除」ボタンが表示された場合（更新の場合）、以下のチェックを行う
-        // if (CheckUtils.isEqual(_inForm.getFormKbn(),
-        // LeshanConstantsIF.NYUURYOKU_GAMEN_HYOJI_KUBUN_UPDATE_SAKUJO_KAKUNIN)) {
-        // // [排他情報：用户プロ情報]の取得件数 ＝ 0 の場合
-        // if (PatientModel_ == null) {
-        // // メッセージID【E00004】（パラメータ1："削除"、パラメータ２："登录"）
-        // this.addErrorMessage(MessageUtils.getMessage("E00004", "削除", "登录"));
-        // this.errorEnd();
-        // }
-        // // [排他情報：用户プロ情報．最終更新日]≠[画面：最終更新日]の場合
-        // if (PatientModel_ != null
-        // && !CheckUtils.isEqual(_inForm.getHidPatientLastUpdateDate(),
-        // PatientModel_.getLastUpdateDate())) {
-        // // メッセージID【E00006】
-        // this.addErrorMessage(MessageUtils.getMessage("E00006", "更新", "登录", PatientModel_
-        // .getLastUpdateUserName(), DateUtils.format(PatientModel_.getLastUpdateDate(),
-        // LeshanConstantsIF.DATE_FORMAT_YYYY_MM_DD_HH_MM)));
-        // this.errorEnd();
-        // }
-        // }
-        // // 「削除」ボタンが表示されなかった場合（新規の場合）、以下のチェックを行う
-        // if (CheckUtils.isEqual(_inForm.getFormKbn(), LeshanConstantsIF.NYUURYOKU_GAMEN_HYOJI_KUBUN_NYUURYOKU)) {
-        // // 排他情報：用户プロ情報
-        // PatientCondition_ = new JktPatientCondition();
-        // // 用户ID
-        // PatientCondition_.setUserId(_inForm.getUserId());
-        // // [排他情報：用户プロファイル情報]
-        // PatientModel_ = PatientDao.selectForUpdate(PatientCondition_);
-        //
-        // [排他情報：用户プロ情報] の取得件数 ＞ 0
-        if (patientModel_ != null) {
-            this.addErrorMessage(MessageUtils.getMessage("E00024", "填写的用户名和手机号码", "重复登录"));
-            this.errorEnd();
-        }
-        // }
-        return patientModel_;
-    }
+		// 排他情報：用户プロ情報
+		RpmPatientCondition patientCondition_ = new RpmPatientCondition();
+		// 用户名
+		patientCondition_.setUserName(_inForm.getUserName());
+		// 用户手机
+		patientCondition_.setCeelNumber(_inForm.getCeelNumber());
+		// 消除标识＝ [定数：消除标识．有効レコード]
+		patientCondition_.setDeleteFlag(LeshanConstantsIF.DEL_FLG_YUKO_RECORD);
+		// [排他情報：用户プロファイル情報]
+		RpmPatientModel patientModel_ = rpmPatientDao.selectForUpdate(patientCondition_);
+		// 「削除」ボタンが表示された場合（更新の場合）、以下のチェックを行う
+		// if (CheckUtils.isEqual(_inForm.getFormKbn(),
+		// LeshanConstantsIF.NYUURYOKU_GAMEN_HYOJI_KUBUN_UPDATE_SAKUJO_KAKUNIN))
+		// {
+		// // [排他情報：用户プロ情報]の取得件数 ＝ 0 の場合
+		// if (PatientModel_ == null) {
+		// // メッセージID【E00004】（パラメータ1："削除"、パラメータ２："登录"）
+		// this.addErrorMessage(MessageUtils.getMessage("E00004", "削除", "登录"));
+		// this.errorEnd();
+		// }
+		// // [排他情報：用户プロ情報．最終更新日]≠[画面：最終更新日]の場合
+		// if (PatientModel_ != null
+		// && !CheckUtils.isEqual(_inForm.getHidPatientLastUpdateDate(),
+		// PatientModel_.getLastUpdateDate())) {
+		// // メッセージID【E00006】
+		// this.addErrorMessage(MessageUtils.getMessage("E00006", "更新", "登录",
+		// PatientModel_
+		// .getLastUpdateUserName(),
+		// DateUtils.format(PatientModel_.getLastUpdateDate(),
+		// LeshanConstantsIF.DATE_FORMAT_YYYY_MM_DD_HH_MM)));
+		// this.errorEnd();
+		// }
+		// }
+		// // 「削除」ボタンが表示されなかった場合（新規の場合）、以下のチェックを行う
+		// if (CheckUtils.isEqual(_inForm.getFormKbn(),
+		// LeshanConstantsIF.NYUURYOKU_GAMEN_HYOJI_KUBUN_NYUURYOKU)) {
+		// // 排他情報：用户プロ情報
+		// PatientCondition_ = new JktPatientCondition();
+		// // 用户ID
+		// PatientCondition_.setUserId(_inForm.getUserId());
+		// // [排他情報：用户プロファイル情報]
+		// PatientModel_ = PatientDao.selectForUpdate(PatientCondition_);
+		//
+		// [排他情報：用户プロ情報] の取得件数 ＞ 0
+		if (patientModel_ != null) {
+			this.addErrorMessage(MessageUtils.getMessage("E00024", "填写的用户名和手机号码", "重复登录"));
+			this.errorEnd();
+		}
+		// }
+		return patientModel_;
+	}
 
-    /**
-     * 用户プロファイルテーブルの登录を行う
-     * 
-     * @param _inForm SCHM00301Form
-     * @throws ApplicationException event処理里应用程序例外发生的情况
-     * @throws SystemException event処理里系统例外发生的情况
-     */
-    private void insertPatient(RPA00201Form _inForm) throws ApplicationException, SystemException {
+	/**
+	 * 用户プロファイルテーブルの登录を行う
+	 * 
+	 * @param _inForm
+	 *            SCHM00301Form
+	 * @throws ApplicationException
+	 *             event処理里应用程序例外发生的情况
+	 * @throws SystemException
+	 *             event処理里系统例外发生的情况
+	 */
+	private void insertPatient(RPA00201Form _inForm) throws ApplicationException, SystemException {
 
-        rpmPatientDao.updateLockTable();
-        RpmPatientModel insertPatientModel_ = new RpmPatientModel();
+		rpmPatientDao.updateLockTable();
+		RpmPatientModel insertPatientModel_ = new RpmPatientModel();
 
-        // 用户ID
-        insertPatientModel_.setUserId(StringUtils.getUniqueId());
-        // 用户名
-        insertPatientModel_.setUserName(_inForm.getUserName());
-        // 生日
-        insertPatientModel_.setBirthday(DateUtils.format(_inForm.getBirthday(),
-            LeshanConstantsIF.DATE_FORMAT_YYYY_YEAR_MM_MONTH_DD_DATE, LeshanConstantsIF.DATE_FORMAT_YYYYMMDD));
-        // 性别ID
-        insertPatientModel_.setSexId(_inForm.getSexId());
-        // 邮政番号
-        insertPatientModel_.setPostNumber(_inForm.getPostNumber());
-        // 住所
-        insertPatientModel_.setAddr(_inForm.getAddr());
-        // 座机
-        insertPatientModel_.setPhoneNumber(_inForm.getPhoneNumber());
-        // 手机
-        insertPatientModel_.setCeelNumber(_inForm.getCeelNumber());
-        // 身份证号码
-        insertPatientModel_.setIdNumber(_inForm.getIdNumber());
-        // 电子邮箱
-        insertPatientModel_.setEmail(_inForm.getEmail());
-        // 消除标识
-        insertPatientModel_.setDeleteFlag(LeshanConstantsIF.DEL_FLG_YUKO_RECORD);
-        // 创建者
-        insertPatientModel_.setCreateUserId(UserSessionUtils.getUserSessionInfo().getUserId());
-        // 创建日
-        insertPatientModel_.setCreateDate(TimestampUtils.getSysTimestamp());
-        // 最終更新用户ID
-        insertPatientModel_.setLastUpdateUserId(UserSessionUtils.getUserSessionInfo().getUserId());
-        // 最終更新用户名
-        insertPatientModel_.setLastUpdateUserName(UserSessionUtils.getUserSessionInfo().getUserName());
-        // 最終更新日
-        insertPatientModel_.setLastUpdateDate(TimestampUtils.getSysTimestamp());
+		// 用户ID
+		insertPatientModel_.setUserId(StringUtils.getUniqueId());
+		// 用户名
+		insertPatientModel_.setUserName(_inForm.getUserName());
+		// 生日
+		insertPatientModel_.setBirthday(DateUtils.format(_inForm.getBirthday(),
+				LeshanConstantsIF.DATE_FORMAT_YYYY_YEAR_MM_MONTH_DD_DATE, LeshanConstantsIF.DATE_FORMAT_YYYYMMDD));
+		// 性别ID
+		insertPatientModel_.setSexId(_inForm.getSexId());
+		// 邮政番号
+		insertPatientModel_.setPostNumber(_inForm.getPostNumber());
+		// 住所
+		insertPatientModel_.setAddr(_inForm.getAddr());
+		// 座机
+		insertPatientModel_.setPhoneNumber(_inForm.getPhoneNumber());
+		// 手机
+		insertPatientModel_.setCeelNumber(_inForm.getCeelNumber());
+		// 身份证号码
+		insertPatientModel_.setIdNumber(_inForm.getIdNumber());
+		// 电子邮箱
+		insertPatientModel_.setEmail(_inForm.getEmail());
 
-        // オブジェクトの空の文字列を削除する。
-        ReflectUtils.clearAllSpace(insertPatientModel_);
+		// 民族
+		insertPatientModel_.setNation(_inForm.getNation());
+		// 出生地
+		insertPatientModel_.setPlaceOfBirth(_inForm.getPlaceOfBirth());
+		// 婚况
+		insertPatientModel_.setMaritalStatus(_inForm.getMaritalStatus());
+		// 农历生日
+		insertPatientModel_.setLunarBirthday(DateUtils.format(_inForm.getLunarBirthday(),
+				LeshanConstantsIF.DATE_FORMAT_YYYY_YEAR_MM_MONTH_DD_DATE, LeshanConstantsIF.DATE_FORMAT_YYYYMMDD));
+		// 出生时间
+		insertPatientModel_.setTimeOfBirth(DateUtils.format(_inForm.getTimeOfBirth(),
+				LeshanConstantsIF.DATE_FORMAT_HH_HOUR_MM_MINUTE, LeshanConstantsIF.DATE_FORMAT_HHMM));
+		// 属相
+		insertPatientModel_.setZodiac(_inForm.getZodiac());
+		// 单位
+		insertPatientModel_.setCompany(_inForm.getCompany());
+		// 职业
+		insertPatientModel_.setProfession(_inForm.getProfession());
 
-        int PatientCount_ = rpmPatientDao.insert(insertPatientModel_);
-        // 件数 ＝ 0 の場合
-        if (PatientCount_ == 0) {
-            this.addErrorMessage(MessageUtils.getMessage("E00047", "登录"));
-            this.errorEnd();
-        }
-    }
+		// 消除标识
+		insertPatientModel_.setDeleteFlag(LeshanConstantsIF.DEL_FLG_YUKO_RECORD);
+		// 创建者
+		insertPatientModel_.setCreateUserId(UserSessionUtils.getUserSessionInfo().getUserId());
+		// 创建日
+		insertPatientModel_.setCreateDate(TimestampUtils.getSysTimestamp());
+		// 最終更新用户ID
+		insertPatientModel_.setLastUpdateUserId(UserSessionUtils.getUserSessionInfo().getUserId());
+		// 最終更新用户名
+		insertPatientModel_.setLastUpdateUserName(UserSessionUtils.getUserSessionInfo().getUserName());
+		// 最終更新日
+		insertPatientModel_.setLastUpdateDate(TimestampUtils.getSysTimestamp());
 
-    /**
-     * 用户基本テーブル DAO的设定
-     * 
-     * @param _rpmPatientDao 用户基本テーブル DAO
-     */
-    public void setRpmPatientDao(RpmPatientDao _rpmPatientDao) {
-        this.rpmPatientDao = _rpmPatientDao;
-    }
+		// オブジェクトの空の文字列を削除する。
+		ReflectUtils.clearAllSpace(insertPatientModel_);
+
+		int PatientCount_ = rpmPatientDao.insert(insertPatientModel_);
+		// 件数 ＝ 0 の場合
+		if (PatientCount_ == 0) {
+			this.addErrorMessage(MessageUtils.getMessage("E00047", "登录"));
+			this.errorEnd();
+		}
+	}
+
+	/**
+	 * 用户基本テーブル DAO的设定
+	 * 
+	 * @param _rpmPatientDao
+	 *            用户基本テーブル DAO
+	 */
+	public void setRpmPatientDao(RpmPatientDao _rpmPatientDao) {
+		this.rpmPatientDao = _rpmPatientDao;
+	}
 
 }

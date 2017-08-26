@@ -265,6 +265,10 @@ public interface StandardConstantsIF {
     String HIZUKE_FORMAT_PTN_M_MONTH = "M";
     /** 日付フォーマットパターン：H（時） */
     String HIZUKE_FORMAT_PTN_H_HOUR = "H";
+    /** 日付フォーマットパターン：H（時） */
+    String DATE_FORMAT_HH_HOUR_MM_MINUTE = "HH时mm分";
+    /** 日付フォーマットパターン：H（時） */
+    String DATE_FORMAT_HHMM = "HHmm";
     /** 日付フォーマットパターン：m（分） */
     String HIZUKE_FORMAT_PTN_M_MINUTE = "m";
     /** 日付フォーマットパターン：DD（日） */

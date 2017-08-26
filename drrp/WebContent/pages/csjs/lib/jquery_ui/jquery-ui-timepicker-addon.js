@@ -31,22 +31,22 @@ function Timepicker() {
 	this.regional = []; // Available regional settings, indexed by language code
 	this.regional[''] = { // Default regional settings
 //		currentText: 'Now',
-		currentText: '現在',
+		currentText: '现在',
 //		closeText: 'Done',
-		closeText: '確認',
+		closeText: '关闭',
 		ampm: false,
 		amNames: ['AM', 'A'],
 		pmNames: ['PM', 'P'],
 		timeFormat: 'hh:mm tt',
 		timeSuffix: '',
 		//timeOnlyTitle: 'Choose Time',
-		timeOnlyTitle: '時刻選択',
+		timeOnlyTitle: '选择时间',
 //		timeText: 'Time',
-		timeText: '時刻',
+		timeText: '时间',
 //		hourText: 'Hour',
-		hourText: '時',
+		hourText: '小时',
 //		minuteText: 'Minute',
-		minuteText: '分',
+		minuteText: '分钟',
 //		secondText: 'Second',
 		secondText: '秒',
 		millisecText: 'Millisecond',
@@ -362,8 +362,8 @@ $.extend(Timepicker.prototype, {
 		if ($dp.find("div#ui-timepicker-div-"+ dp_id).length === 0 && o.showTimepicker) {
 			var noDisplay = ' style="display:none;"',
 				html =	'<div class="ui-timepicker-div" id="ui-timepicker-div-' + dp_id + '"><dl>' +
-						'<dt class="ui_tpicker_time_label" id="ui_tpicker_time_label_' + dp_id + '"' +
-						((o.showTime) ? '' : noDisplay) + '>' + o.timeText + '</dt>' +
+						// 20170826 '<dt class="ui_tpicker_time_label" id="ui_tpicker_time_label_' + dp_id + '"' +
+						// 20170826 ((o.showTime) ? '' : noDisplay) + '>' + o.timeText + '</dt>' +
 						'<dd class="ui_tpicker_time" id="ui_tpicker_time_' + dp_id + '"' +
 						((o.showTime) ? '' : noDisplay) + '></dd>' +
 						'<dt class="ui_tpicker_hour_label" id="ui_tpicker_hour_label_' + dp_id + '"' +

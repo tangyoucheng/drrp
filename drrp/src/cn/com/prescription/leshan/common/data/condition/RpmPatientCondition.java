@@ -74,6 +74,158 @@ public class RpmPatientCondition extends BaseCondition {
     private String email = null;
 
     /**
+	 * @return the nation
+	 */
+	public String getNation() {
+		return nation;
+	}
+
+	/**
+	 * @param nation the nation to set
+	 */
+	public void setNation(String nation) {
+		this.nation = nation;
+	}
+
+	/**
+	 * @return the placeOfBirth
+	 */
+	public String getPlaceOfBirth() {
+		return placeOfBirth;
+	}
+
+	/**
+	 * @param placeOfBirth the placeOfBirth to set
+	 */
+	public void setPlaceOfBirth(String placeOfBirth) {
+		this.placeOfBirth = placeOfBirth;
+	}
+
+	/**
+	 * @return the maritalStatus
+	 */
+	public String getMaritalStatus() {
+		return maritalStatus;
+	}
+
+	/**
+	 * @param maritalStatus the maritalStatus to set
+	 */
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+
+	/**
+	 * @return the lunarBirthday
+	 */
+	public String getLunarBirthday() {
+		return lunarBirthday;
+	}
+
+	/**
+	 * @param lunarBirthday the lunarBirthday to set
+	 */
+	public void setLunarBirthday(String lunarBirthday) {
+		this.lunarBirthday = lunarBirthday;
+	}
+
+	/**
+	 * @return the timeOfBirth
+	 */
+	public String getTimeOfBirth() {
+		return timeOfBirth;
+	}
+
+	/**
+	 * @param timeOfBirth the timeOfBirth to set
+	 */
+	public void setTimeOfBirth(String timeOfBirth) {
+		this.timeOfBirth = timeOfBirth;
+	}
+
+	/**
+	 * @return the zodiac
+	 */
+	public String getZodiac() {
+		return zodiac;
+	}
+
+	/**
+	 * @param zodiac the zodiac to set
+	 */
+	public void setZodiac(String zodiac) {
+		this.zodiac = zodiac;
+	}
+
+	/**
+	 * @return the company
+	 */
+	public String getCompany() {
+		return company;
+	}
+
+	/**
+	 * @param company the company to set
+	 */
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	/**
+	 * @return the profession
+	 */
+	public String getProfession() {
+		return profession;
+	}
+
+	/**
+	 * @param profession the profession to set
+	 */
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+
+	/**
+     * 民族
+     */
+    private String nation = null;
+
+    /**
+     * 出生地
+     */
+    private String placeOfBirth = null;
+
+    /**
+     * 婚况
+     */
+    private String maritalStatus = null;
+
+    /**
+     * 农历
+     */
+    private String lunarBirthday = null;
+
+    /**
+     * 出生时间
+     */
+    private String timeOfBirth = null;
+
+    /**
+     * 属相
+     */
+    private String zodiac = null;
+
+    /**
+     * 单位
+     */
+    private String company = null;
+
+    /**
+     * 职业
+     */
+    private String profession = null;
+
+    /**
      * ?除??
      */
     private String deleteFlag = null;

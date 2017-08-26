@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/pages/csjs/lib/jquery_ui/jquery-ui.css" />
 <script type="text/javascript" src="<%=request.getContextPath()%>/pages/csjs/lib/jquery_ui/jquery-ui.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/pages/csjs/lib/jquery_ui/jquery.ui.datepicker-zh.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/pages/csjs/lib/jquery_ui/jquery-ui-timepicker-addon.js"></script>
 
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/pages/csjs/common/pubjyutaku_common.js"></script>
