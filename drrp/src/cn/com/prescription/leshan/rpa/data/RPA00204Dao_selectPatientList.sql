@@ -11,16 +11,7 @@
  */
 
 SELECT
-    patient.user_id,
-    patient.user_name,
-    patient.birthday,
-    patient.sex_id,
-    patient.post_number,
-    patient.addr,
-    patient.phone_number,
-    patient.ceel_number,
-    patient.id_number,
-    patient.email,
+    patient.*,
     prescription.create_date as create_date_prescription,
     prescriptionInfo.prescription_type,
     prescriptionInfo.contents,

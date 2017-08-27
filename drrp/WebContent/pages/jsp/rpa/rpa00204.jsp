@@ -96,6 +96,15 @@
                                         <s:hidden id="hidContents_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].contents" />
                                         <s:hidden id="hidFileContents_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].fileContents" />
                                         <s:hidden id="hidPrice_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].price" />
+                                        
+                                        <s:hidden id="hidNation_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].nation" />
+                                        <s:hidden id="hidPlaceOfBirth_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].placeOfBirth" />
+                                        <s:hidden id="hidMaritalStatus_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].maritalStatus" />
+                                        <s:hidden id="hidLunarBirthday_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].lunarBirthday" />
+                                        <s:hidden id="hidTimeOfBirth_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].timeOfBirth" />
+                                        <s:hidden id="hidZodiac_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].zodiac" />
+                                        <s:hidden id="hidCompany_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].company" />
+                                        <s:hidden id="hidProfession_%{#listData.index}" name="rpa00204Form.subForm1[%{#listData.index}].profession" />
                                     </td>
                                     <!-- 用户名  -->
                                     <td title="<s:property value="userName" /> " class="txt_overflow">

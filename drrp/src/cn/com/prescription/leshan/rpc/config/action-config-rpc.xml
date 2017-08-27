@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="rpc" extends="basePackage" strict-method-invocation="false">
+        <!-- 初诊添加 -->
+        <action name="rpc00101Action_*"
+            class="cn.com.prescription.leshan.rpc.action.RPC00101Action" method="{1}">
+            <result name="input">/pages/jsp/rpc/rpc00101.jsp</result>
+            <result name="error">/pages/jsp/rpc/rpc00101.jsp</result>
+            <result name="success">/pages/jsp/rpc/rpc00101.jsp</result>
+        </action>
+        <!-- 门诊一览 -->
+        <action name="rpc00102Action_*"
+            class="cn.com.prescription.leshan.rpc.action.RPC00102Action" method="{1}">
+            <result name="input">/pages/jsp/rpc/rpc00102.jsp</result>
+            <result name="error">/pages/jsp/rpc/rpc00102.jsp</result>
+            <result name="success">/pages/jsp/rpc/rpc00102.jsp</result>
+        </action>
+        <!-- 初诊编辑 -->
+        <action name="rpc00103Action_*"
+            class="cn.com.prescription.leshan.rpc.action.RPC00103Action" method="{1}">
+            <result name="input">/pages/jsp/rpc/rpc00103.jsp</result>
+            <result name="error">/pages/jsp/rpc/rpc00103.jsp</result>
+            <result name="success">/pages/jsp/rpc/rpc00103.jsp</result>
+        </action>
+        <!-- 复诊添加 -->
+        <action name="rpc00104Action_*"
+            class="cn.com.prescription.leshan.rpc.action.RPC00104Action" method="{1}">
+            <result name="input">/pages/jsp/rpc/rpc00104.jsp</result>
+            <result name="error">/pages/jsp/rpc/rpc00104.jsp</result>
+            <result name="success">/pages/jsp/rpc/rpc00104.jsp</result>
+        </action>
+        <!-- 复诊编辑 -->
+        <action name="rpc00105Action_*"
+            class="cn.com.prescription.leshan.rpc.action.RPC00105Action" method="{1}">
+            <result name="input">/pages/jsp/rpc/rpc00105.jsp</result>
+            <result name="error">/pages/jsp/rpc/rpc00105.jsp</result>
+            <result name="success">/pages/jsp/rpc/rpc00105.jsp</result>
+        </action>
+    </package>
+</struts>

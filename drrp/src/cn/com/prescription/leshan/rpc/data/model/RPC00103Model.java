@@ -1,21 +1,19 @@
 /*
- * Copyright(c) 2016
+ * Copyright(c) 2016 
  */
+package cn.com.prescription.leshan.rpc.data.model;
 
-package cn.com.prescription.leshan.common.data.model;
-
-import java.sql.Timestamp;
-import cn.com.prescription.framework.data.model.StandardModel;
+import cn.com.prescription.leshan.common.data.model.RpmOutpatientModel;
 
 /**
- * 患者基本信息表 モデルオブジェクト。
- *
- * @author gl
+ * 初诊编辑画面のモードル
+ * 
+ * @author fsb
  */
 /*
- * 新規作成 DATE: 2012.02.13 NAME: gl
+ * 新規作成 DATE: 2012.11.07 NAME: fsb
  */
-public class RpmPatientModel extends StandardModel {
+public class RPC00103Model extends RpmOutpatientModel {
 
 	/**
 	 * 串行版本UID
@@ -23,9 +21,9 @@ public class RpmPatientModel extends StandardModel {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * テーブル定義
+	 * 性别
 	 */
-	public static final String TABLE = "RPM_PATIENT";
+	private String sex = null;
 
 	/**
 	 * 用?ID
@@ -118,56 +116,39 @@ public class RpmPatientModel extends StandardModel {
 	private String profession = null;
 
 	/**
-	 * ?除??
+	 * ログイン画面モデル 的构造。
 	 */
-	private String deleteFlag = null;
-
-	/**
-	 * ?建者
-	 */
-	private String createUserId = null;
-
-	/**
-	 * ?建日期
-	 */
-	private Timestamp createDate = null;
-
-	/**
-	 * 最?更新者
-	 */
-	private String lastUpdateUserId = null;
-
-	/**
-	 * 最?更新者名
-	 */
-	private String lastUpdateUserName = null;
-
-	/**
-	 * 最?更新日期
-	 */
-	private Timestamp lastUpdateDate = null;
-
-	/**
-	 * 患者基本信息表モデルBean 的构造。
-	 */
-	public RpmPatientModel() {
+	public RPC00103Model() {
 		super();
 	}
 
 	/**
+	 * 性别的取得
+	 * @return 性别
+	 */
+	public String getSex() {
+	    return sex;
+	}
+
+	/**
+	 * 性别的设定
+	 * @param _sex 性别
+	 */
+	public void setSex(String _sex) {
+	    this.sex = _sex;
+	}
+
+	/**
 	 * 用?ID的取得
-	 * 
 	 * @return 用?ID
 	 */
 	public String getUserId() {
-		return this.userId;
+		return userId;
 	}
 
 	/**
 	 * 用?ID的设定
-	 * 
-	 * @param __userId
-	 *            用?ID
+	 * @param __userId 用?ID
 	 */
 	public void setUserId(String _userId) {
 		this.userId = _userId;
@@ -175,18 +156,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 用?名的取得
-	 * 
 	 * @return 用?名
 	 */
 	public String getUserName() {
-		return this.userName;
+		return userName;
 	}
 
 	/**
 	 * 用?名的设定
-	 * 
-	 * @param __userName
-	 *            用?名
+	 * @param __userName 用?名
 	 */
 	public void setUserName(String _userName) {
 		this.userName = _userName;
@@ -194,18 +172,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 生日的取得
-	 * 
 	 * @return 生日
 	 */
 	public String getBirthday() {
-		return this.birthday;
+		return birthday;
 	}
 
 	/**
 	 * 生日的设定
-	 * 
-	 * @param __birthday
-	 *            生日
+	 * @param __birthday 生日
 	 */
 	public void setBirthday(String _birthday) {
 		this.birthday = _birthday;
@@ -213,18 +188,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 性?ID的取得
-	 * 
 	 * @return 性?ID
 	 */
 	public String getSexId() {
-		return this.sexId;
+		return sexId;
 	}
 
 	/**
 	 * 性?ID的设定
-	 * 
-	 * @param __sexId
-	 *            性?ID
+	 * @param __sexId 性?ID
 	 */
 	public void setSexId(String _sexId) {
 		this.sexId = _sexId;
@@ -232,18 +204,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * ?政番号的取得
-	 * 
 	 * @return ?政番号
 	 */
 	public String getPostNumber() {
-		return this.postNumber;
+		return postNumber;
 	}
 
 	/**
 	 * ?政番号的设定
-	 * 
-	 * @param __postNumber
-	 *            ?政番号
+	 * @param __postNumber ?政番号
 	 */
 	public void setPostNumber(String _postNumber) {
 		this.postNumber = _postNumber;
@@ -251,18 +220,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 地址的取得
-	 * 
 	 * @return 地址
 	 */
 	public String getAddr() {
-		return this.addr;
+		return addr;
 	}
 
 	/**
 	 * 地址的设定
-	 * 
-	 * @param __addr
-	 *            地址
+	 * @param __addr 地址
 	 */
 	public void setAddr(String _addr) {
 		this.addr = _addr;
@@ -270,18 +236,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 座机的取得
-	 * 
 	 * @return 座机
 	 */
 	public String getPhoneNumber() {
-		return this.phoneNumber;
+		return phoneNumber;
 	}
 
 	/**
 	 * 座机的设定
-	 * 
-	 * @param __phoneNumber
-	 *            座机
+	 * @param __phoneNumber 座机
 	 */
 	public void setPhoneNumber(String _phoneNumber) {
 		this.phoneNumber = _phoneNumber;
@@ -289,18 +252,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 手机的取得
-	 * 
 	 * @return 手机
 	 */
 	public String getCeelNumber() {
-		return this.ceelNumber;
+		return ceelNumber;
 	}
 
 	/**
 	 * 手机的设定
-	 * 
-	 * @param __ceelNumber
-	 *            手机
+	 * @param __ceelNumber 手机
 	 */
 	public void setCeelNumber(String _ceelNumber) {
 		this.ceelNumber = _ceelNumber;
@@ -308,18 +268,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 身??号?的取得
-	 * 
 	 * @return 身??号?
 	 */
 	public String getIdNumber() {
-		return this.idNumber;
+		return idNumber;
 	}
 
 	/**
 	 * 身??号?的设定
-	 * 
-	 * @param __idNumber
-	 *            身??号?
+	 * @param __idNumber 身??号?
 	 */
 	public void setIdNumber(String _idNumber) {
 		this.idNumber = _idNumber;
@@ -327,18 +284,15 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * ?子?箱的取得
-	 * 
 	 * @return ?子?箱
 	 */
 	public String getEmail() {
-		return this.email;
+		return email;
 	}
 
 	/**
 	 * ?子?箱的设定
-	 * 
-	 * @param __email
-	 *            ?子?箱
+	 * @param __email ?子?箱
 	 */
 	public void setEmail(String _email) {
 		this.email = _email;
@@ -346,7 +300,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 民族的取得
-	 * 
 	 * @return 民族
 	 */
 	public String getNation() {
@@ -355,9 +308,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 民族的设定
-	 * 
-	 * @param _nation
-	 *            民族
+	 * @param __nation 民族
 	 */
 	public void setNation(String _nation) {
 		this.nation = _nation;
@@ -365,7 +316,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 出生地的取得
-	 * 
 	 * @return 出生地
 	 */
 	public String getPlaceOfBirth() {
@@ -374,9 +324,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 出生地的设定
-	 * 
-	 * @param _placeOfBirth
-	 *            出生地
+	 * @param __placeOfBirth 出生地
 	 */
 	public void setPlaceOfBirth(String _placeOfBirth) {
 		this.placeOfBirth = _placeOfBirth;
@@ -384,7 +332,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 婚况的取得
-	 * 
 	 * @return 婚况
 	 */
 	public String getMaritalStatus() {
@@ -393,9 +340,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 婚况的设定
-	 * 
-	 * @param _maritalStatus
-	 *            婚况
+	 * @param __maritalStatus 婚况
 	 */
 	public void setMaritalStatus(String _maritalStatus) {
 		this.maritalStatus = _maritalStatus;
@@ -403,7 +348,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 农历的取得
-	 * 
 	 * @return 农历
 	 */
 	public String getLunarBirthday() {
@@ -412,9 +356,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 农历的设定
-	 * 
-	 * @param _lunarBirthday
-	 *            农历
+	 * @param __lunarBirthday 农历
 	 */
 	public void setLunarBirthday(String _lunarBirthday) {
 		this.lunarBirthday = _lunarBirthday;
@@ -422,7 +364,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 出生时间的取得
-	 * 
 	 * @return 出生时间
 	 */
 	public String getTimeOfBirth() {
@@ -431,9 +372,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 出生时间的设定
-	 * 
-	 * @param _timeOfBirth
-	 *            出生时间
+	 * @param __timeOfBirth 出生时间
 	 */
 	public void setTimeOfBirth(String _timeOfBirth) {
 		this.timeOfBirth = _timeOfBirth;
@@ -441,7 +380,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 属相的取得
-	 * 
 	 * @return 属相
 	 */
 	public String getZodiac() {
@@ -450,9 +388,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 属相的设定
-	 * 
-	 * @param _zodiac
-	 *            属相
+	 * @param __zodiac 属相
 	 */
 	public void setZodiac(String _zodiac) {
 		this.zodiac = _zodiac;
@@ -460,7 +396,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 单位的取得
-	 * 
 	 * @return 单位
 	 */
 	public String getCompany() {
@@ -469,9 +404,7 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 单位的设定
-	 * 
-	 * @param _company
-	 *            单位
+	 * @param __company 单位
 	 */
 	public void setCompany(String _company) {
 		this.company = _company;
@@ -479,7 +412,6 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 职业的取得
-	 * 
 	 * @return 职业
 	 */
 	public String getProfession() {
@@ -488,126 +420,10 @@ public class RpmPatientModel extends StandardModel {
 
 	/**
 	 * 职业的设定
-	 * 
-	 * @param _profession
-	 *            职业
+	 * @param __profession 职业
 	 */
 	public void setProfession(String _profession) {
 		this.profession = _profession;
-	}
-
-	/**
-	 * ?除??的取得
-	 * 
-	 * @return ?除??
-	 */
-	public String getDeleteFlag() {
-		return this.deleteFlag;
-	}
-
-	/**
-	 * ?除??的设定
-	 * 
-	 * @param __deleteFlag
-	 *            ?除??
-	 */
-	public void setDeleteFlag(String _deleteFlag) {
-		this.deleteFlag = _deleteFlag;
-	}
-
-	/**
-	 * ?建者的取得
-	 * 
-	 * @return ?建者
-	 */
-	public String getCreateUserId() {
-		return this.createUserId;
-	}
-
-	/**
-	 * ?建者的设定
-	 * 
-	 * @param __createUserId
-	 *            ?建者
-	 */
-	public void setCreateUserId(String _createUserId) {
-		this.createUserId = _createUserId;
-	}
-
-	/**
-	 * ?建日期的取得
-	 * 
-	 * @return ?建日期
-	 */
-	public Timestamp getCreateDate() {
-		return this.createDate;
-	}
-
-	/**
-	 * ?建日期的设定
-	 * 
-	 * @param __createDate
-	 *            ?建日期
-	 */
-	public void setCreateDate(Timestamp _createDate) {
-		this.createDate = _createDate;
-	}
-
-	/**
-	 * 最?更新者的取得
-	 * 
-	 * @return 最?更新者
-	 */
-	public String getLastUpdateUserId() {
-		return this.lastUpdateUserId;
-	}
-
-	/**
-	 * 最?更新者的设定
-	 * 
-	 * @param __lastUpdateUserId
-	 *            最?更新者
-	 */
-	public void setLastUpdateUserId(String _lastUpdateUserId) {
-		this.lastUpdateUserId = _lastUpdateUserId;
-	}
-
-	/**
-	 * 最?更新者名的取得
-	 * 
-	 * @return 最?更新者名
-	 */
-	public String getLastUpdateUserName() {
-		return this.lastUpdateUserName;
-	}
-
-	/**
-	 * 最?更新者名的设定
-	 * 
-	 * @param __lastUpdateUserName
-	 *            最?更新者名
-	 */
-	public void setLastUpdateUserName(String _lastUpdateUserName) {
-		this.lastUpdateUserName = _lastUpdateUserName;
-	}
-
-	/**
-	 * 最?更新日期的取得
-	 * 
-	 * @return 最?更新日期
-	 */
-	public Timestamp getLastUpdateDate() {
-		return this.lastUpdateDate;
-	}
-
-	/**
-	 * 最?更新日期的设定
-	 * 
-	 * @param __lastUpdateDate
-	 *            最?更新日期
-	 */
-	public void setLastUpdateDate(Timestamp _lastUpdateDate) {
-		this.lastUpdateDate = _lastUpdateDate;
 	}
 
 }

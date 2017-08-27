@@ -281,8 +281,8 @@ function doAddDrugCallback(_rerurnObject) {
             drugTableHtml += '<th style="font-size:1em;vertical-align:middle;">药品名称</th>';
             drugTableHtml += '<th style="font-size:1em;vertical-align:middle;">厂商名称</th>';
             drugTableHtml += '<th style="font-size:1em;vertical-align:middle;">价格(元)/规格</th>';
-            drugTableHtml += '<th style="font-size:1em;vertical-align:middle;">数量<img class=icon_mustentry style="MARGIN-TOP: 2px" alt=必须 src="/prescription/pages/img/icon_mustentry.gif"/></th>';
-            drugTableHtml += '<th style="font-size:1em;"></th>';
+            drugTableHtml += '<th style="font-size:1em;vertical-align:middle;">数量<img class=icon_mustentry style="MARGIN-TOP: 2px" alt=必须 src="'+getContextPath("/pages/img/icon_mustentry.gif")+'"/></th>';
+            drugTableHtml += '<th style="font-size:1em;" ></th>';
             drugTableHtml += '</tr></thead>';
             drugTableHtml += '<tbody></tbody>';
             drugTableHtml += '</table>';

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+	<formset>
+		<!-- rpc00101 初诊添加  -->
+		<form name="rpc00101Action#doEntry">
+            <field property="patientName" depends="required">
+                <arg key="患者姓名" resource="false" />
+            </field>
+            <field property="ceelNumber" depends="required">
+                <arg key="手机号码" resource="false" />
+            </field>
+		</form>
+		<!-- rpc00104 复诊添加  -->
+		<form name="rpc00104Action#doEntry">
+            <field property="patientName" depends="required">
+                <arg key="患者姓名" resource="false" />
+            </field>
+		</form>
+	</formset>
+</form-validation>

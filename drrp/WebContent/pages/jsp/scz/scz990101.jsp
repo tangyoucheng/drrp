@@ -61,6 +61,7 @@
                                         <s:iterator status="rowMenuData" value="top" >
                                             <td>
                                                 <a id="menuTop_${mainMenuData.index}_${rowMenuData.index}" href="#_${mainMenuData.index}_${rowMenuData.index}" onclick="return selectMenu('${menuId}',this)"><g:property value="menuName"/></a>
+                                                <input id="menuTop_${mainMenuData.index}_${rowMenuData.index}_menuId" type="hidden" value="${menuId}">
                                             </td>
                                         </s:iterator>
                                     </tr>

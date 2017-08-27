@@ -61,6 +61,24 @@ function setSelectedData() {
         _rpa00204RetuanObject.fileContents = $("#hidFileContents_" + dataIndex).val();
         //处方金额
         _rpa00204RetuanObject.price = $("#hidPrice_" + dataIndex).val();
+        
+        //民族
+        _rpa00204RetuanObject.nation = $("#hidNation_" + dataIndex).val();
+        //出生地
+        _rpa00204RetuanObject.placeOfBirth = $("#hidPlaceOfBirth_" + dataIndex).val();
+        //婚况
+        _rpa00204RetuanObject.maritalStatus = $("#hidMaritalStatus_" + dataIndex).val();
+        //农历生日
+        _rpa00204RetuanObject.lunarBirthday = $("#hidLunarBirthday_" + dataIndex).val();
+        //出生时间
+        _rpa00204RetuanObject.timeOfBirth = $("#hidTimeOfBirth_" + dataIndex).val();
+        //属相
+        _rpa00204RetuanObject.zodiac = $("#hidZodiac_" + dataIndex).val();
+        //单位
+        _rpa00204RetuanObject.company = $("#hidCompany_" + dataIndex).val();
+        //职业
+        _rpa00204RetuanObject.profession = $("#hidProfession_" + dataIndex).val();
+        
     	window.top.closeDlg(window.top.right.searchPatientCallback(_rpa00204RetuanObject));
 	}
 }

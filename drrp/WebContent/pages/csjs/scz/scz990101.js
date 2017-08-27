@@ -50,7 +50,7 @@ $(document).ready(function(){
 	
 	// 打开待处理信息
     $('#menuTop_0_0').addClass("selected");
-	selectMenu('rpa','menuTop_0_0');
+	selectMenu($('#menuTop_0_0_menuId').val(),'menuTop_0_0');
         
 });
 

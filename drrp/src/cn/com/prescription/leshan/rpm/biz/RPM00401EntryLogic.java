@@ -65,9 +65,6 @@ public class RPM00401EntryLogic extends StandardBiz implements StandardLogic {
 
         // event処理結果
         RPM00401Form inForm_ = (RPM00401Form) _event.getForm();
-        RpmRoleMenuCondition _condition = new RpmRoleMenuCondition();
-        _condition.setRoleId(inForm_.getRoleId());
-        rpmRoleMenu01Dao.deleteRoleMenu(_condition);
         // [画面：設定情報一覧]の件数分で繰り返して、以下の処理を行う。
         for (int i = 0; i < inForm_.getSubForm1().size(); i++) {
 
@@ -76,7 +73,7 @@ public class RPM00401EntryLogic extends StandardBiz implements StandardLogic {
             // [画面：許可]が選択した場合、以下の処理を行う
             if (rpm0040101Dto_.isCheck()) {
 
-                // 設定情報マスタに該当情報の更新
+                // 設定情報マスタに該当情報の更新Z
                 RpmRoleMenuModel model_ = new RpmRoleMenuModel();
                 // 役割権限情報マスタ．役割番号
                 model_.setRoleId(inForm_.getRoleId());
@@ -99,6 +96,11 @@ public class RPM00401EntryLogic extends StandardBiz implements StandardLogic {
                         this.errorEnd();
                     }
                 }
+            } else {
+                RpmRoleMenuCondition _condition = new RpmRoleMenuCondition();
+                _condition.setRoleId(inForm_.getRoleId());
+                _condition.setMenuId(rpm0040101Dto_.getHidMenuId());
+                rpmRoleMenu01Dao.deleteRoleMenu(_condition);
             }
         }
 

@@ -24,6 +24,9 @@
     <include file="cn/com/prescription/leshan/rpb/config/action-config-rpb-ajax.xml" />
     <include file="cn/com/prescription/leshan/rpb/config/action-config-rpb.xml" />
     
+    <include file="cn/com/prescription/leshan/rpc/config/action-config-rpc-ajax.xml" />
+    <include file="cn/com/prescription/leshan/rpc/config/action-config-rpc.xml" />
+    
     <!-- 其他 -->
     <include file="cn/com/prescription/leshan/scz/config/action-config-scz-ajax.xml" />
     <include file="cn/com/prescription/leshan/scz/config/action-config-scz.xml" />
